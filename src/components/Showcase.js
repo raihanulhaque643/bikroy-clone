@@ -11,7 +11,20 @@ const Showcase = () => {
                     <p className="rowOneParagraph">Buy and sell everything from used cars to mobile phones and computers, or search for property, jobs and more <span style={{fontWeight: "bold"}}>in Bangladesh!</span></p>
                     </div>
                     <div className="rowTwo">
-                    rowTwo
+                    <h4>Browse our top categories:</h4>
+                    <div className="showcaseCategories">
+                        <div className="showcaseCategoriesRowOne">
+                            <div className="categoryColumn"><img src="Mobiles.png" alt=""/> Phones</div>
+                            <div className="categoryColumn"><img src="property.png" alt=""/>Property</div>
+                            <div className="categoryColumn"><img src="vehicles.png" alt=""/>Vehicles</div>
+                            <div className="categoryColumn"><img src="jobs.png" alt=""/>Jobs</div>
+                        </div>
+                        <div className="showcaseCategoriesRowTwo">
+                            <div className="showcaseCategoriesRowTwoItemOne">New!</div>
+                            <div className="showcaseCategoriesRowTwoItemTwo">Doorstep delivery</div>
+                            <div className="showcaseCategoriesRowTwoItemThree">Order online with 100% buyer protection</div>
+                        </div>
+                    </div>
                     </div>
                 </div>
                 <div className="showcaseColumnTwo">
