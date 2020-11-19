@@ -1,0 +1,82 @@
+.headerContainer {
+    width: 100%;
+    background: #128e73;
+    box-sizing: border-box;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: Arial,Helvetica,sans-serif;
+    width: 984px;
+    overflow: visible;
+}
+
+.headerLeft {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 30px;
+    margin-right: 50px;
+}
+
+.allAdsLink {
+    margin-right: 30px;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.loginButton:hover, .allAdsLink:hover {
+    cursor: pointer;
+    color: #d4dada;
+
+}
+
+.headerRight {
+    display: flex;
+    align-items: center;
+}
+
+.postYourAdButtonContainer {
+    margin-left: 50px;
+    height: 42px;
+}
+
+.postYourAdButton {
+    height: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #673500;
+    background: -webkit-linear-gradient(#ffd972,#ffba49);
+    text-shadow: 0 1px 0 #ffee96;
+    outline: none;
+    box-shadow: 0 1px 2px 0 #004137;
+    border: solid 0 transparent;
+    border-radius: 4px;
+}
+
+.postYourAdButton:hover {
+    cursor: pointer;
+    background: linear-gradient(#ffba49,#ffd972);
+}
+
+.postYourAdButton:active {
+    cursor: pointer;
+    background: #ffd972;
+}
+
+.loginButton {
+    margin-left: 50px;
+}
