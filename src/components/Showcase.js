@@ -6,7 +6,13 @@ const Showcase = () => {
         <div className="showcaseContainer">
             <div className="showcase">
                 <div className="showcaseColumnOne">
-                {/* showcaseColumnOne */}
+                    <div className="rowOne">
+                    <h2 className="rowOneHeading">Welcome to Bikryo.com - the largest marketplace in Bangladesh!</h2>
+                    <p className="rowOneParagraph">Buy and sell everything from used cars to mobile phones and computers, or search for property, jobs and more <span style={{fontWeight: "bold"}}>in Bangladesh!</span></p>
+                    </div>
+                    <div className="rowTwo">
+                    rowTwo
+                    </div>
                 </div>
                 <div className="showcaseColumnTwo">
                 <img src="bd.svg" alt="" className="bdMap" />
