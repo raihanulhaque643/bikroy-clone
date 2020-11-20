@@ -1,16 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
 import './App.css';
 
 import Header from './components/Header';
 import Showcase from './components/Showcase';
+import Body from './components/Body';
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Showcase />
+      <Body />
     </div>
   );
 }
