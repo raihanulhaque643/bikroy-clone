@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/Header';
 import Showcase from './components/Showcase';
 import Body from './components/Body';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Showcase />
       <Body />
+      <Footer />
     </div>
   );
 }
