@@ -1,7 +1,7 @@
 import React from 'react';
-import './BodyHeader.css';
+import './Body.css';
 
-const BodyHeader = () => {
+const Body = () => {
     return (
         <div className="bodyContainer">
             <div className="bodyMainColumn">
@@ -29,4 +29,4 @@ const BodyHeader = () => {
     )
 }
 
-export default BodyHeader;
+export default Body;
