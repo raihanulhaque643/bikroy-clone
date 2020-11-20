@@ -19,6 +19,19 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.bodyRowTwo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    min-height: 768px;
+    max-height: auto;
+    background-color: white;
+    border-radius: 6px;
+    border-bottom: 4px solid rgb(221, 220, 220);
 }
 
 .bodyRowOneLeft, .bodyRowOneRight {

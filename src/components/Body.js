@@ -1,5 +1,6 @@
 import React from 'react';
 import './Body.css';
+import CategoryItem from './CategoryItem';
 
 const Body = () => {
     return (
@@ -23,6 +24,9 @@ const Body = () => {
                             <a href="#">Like us on Facebook</a>
                         </div>
                     </div>
+                </div>
+                <div className="bodyRowTwo">
+                <CategoryItem name="Mobiles" productStock="87,797" description="Buy and sell new and used mobiles, SIM cards and other mobile accessories in Bangladesh. Choose from top brands including Apple, OnePlus, Xiaomi and Nokia."  image="mobiles.png" />
                 </div>
             </div>
         </div>
