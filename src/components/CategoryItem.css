@@ -1,0 +1,50 @@
+.categoryItemContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    margin: 0px 35px;
+}
+
+.categoryItem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 180px;
+    height: auto;
+}
+
+.categoryItemImage > img {
+    width: 45px;
+    height: auto;
+    margin: 10px 0px 0px 0px;
+}
+
+.categoryItemName{
+    color: #0074ba;
+    font-weight: bold;
+    margin: 0px;
+    margin-bottom: 5px;
+}
+
+.categoryItemStock {
+    font-size: 14px;
+    color: darkgray;
+    margin-bottom: 5px;
+}
+
+.categoryItemDescription {
+    font-size: 14px;
+    color: rgb(114, 114, 114);
+}
+
+.categoryItemContainer:hover > .categoryItemName {
+    color: #00547e;
+}
+
+
+.categoryItemDescription {
+    text-align: center;
+}
