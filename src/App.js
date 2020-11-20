@@ -3,14 +3,14 @@ import './App.css';
 
 import Header from './components/Header';
 import Showcase from './components/Showcase';
-import Body from './components/Body';
+import BodyHeader from './components/BodyHeader';
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Showcase />
-      <Body />
+      <BodyHeader />
     </div>
   );
 }

@@ -17,7 +17,7 @@
 
 .bodyRowOne {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
@@ -27,12 +27,23 @@
     background-color: white;
     border-radius: 6px;
     border-bottom: 4px solid rgb(221, 220, 220);
+    display: flex;
 }
 
 .bodyRowOneLeft {
-    width: 60%;
+    width: 75%;
+    padding: 10px 0px;
 }
 
 .bodyRowOneRight {
-    width: 38%;
+    width: 23%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bodyRowOneLeftColumnOne, .bodyRowOneRightColumnOne, .bodyRowOneRightColumnTwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
