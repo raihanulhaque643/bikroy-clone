@@ -55,6 +55,12 @@ const Body = () => {
                 </div>
 
                 </div>
+
+                <div className="bodyFooter">
+                    <p style={{fontSize: '26px', marginTop: '40px'}}>Do you have something to sell?</p>
+                    <p style={{fontSize: '20px', marginTop: '0px'}}>Post your ad on Bikryo.com</p>
+                    <p><button className="bodyFooterButton">Post an ad now!</button></p>
+                </div>
             </div>
         </div>
     )
