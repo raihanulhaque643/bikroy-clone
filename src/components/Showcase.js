@@ -14,10 +14,10 @@ const Showcase = () => {
                     <h4>Browse our top categories:</h4>
                     <div className="showcaseCategories">
                         <div className="showcaseCategoriesRowOne">
-                            <div className="categoryColumn"><img src="Mobiles.png" alt=""/> Phones</div>
-                            <div className="categoryColumn"><img src="property.png" alt=""/>Property</div>
-                            <div className="categoryColumn"><img src="vehicles.png" alt=""/>Vehicles</div>
-                            <div className="categoryColumn"><img src="jobs.png" alt=""/>Jobs</div>
+                            <div className="categoryColumn"><img src="Mobiles.png" alt=""/><a href="#">Phones</a></div>
+                            <div className="categoryColumn"><img src="property.png" alt=""/><a href="#">Property</a></div>
+                            <div className="categoryColumn"><img src="vehicles.png" alt=""/><a href="#">Vehicles</a></div>
+                            <div className="categoryColumn"><img src="jobs.png" alt=""/><a href="#">Jobs</a></div>
                         </div>
                         <div className="showcaseCategoriesRowTwo">
                             <div className="showcaseCategoriesRowTwoItemOne">New!</div>

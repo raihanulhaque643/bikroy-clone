@@ -63,6 +63,17 @@
     justify-content: center;
 }
 
+.categoryColumn a {
+    text-decoration: none;
+    color: #0074ba;
+}
+
+.categoryColumn > a:hover , img:hover {
+    text-decoration: none;
+    color: #00547e;
+    cursor: pointer;
+}
+
 .showcaseCategoriesRowTwo {
     display: flex;
     justify-content: space-between;
