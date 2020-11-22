@@ -6,7 +6,8 @@ import {
   Switch,
   Route,
   Link,
-  Redirect
+  Redirect,
+  useRouteMatch
 } from "react-router-dom";
 
 import Header from './components/Header';
@@ -25,7 +26,7 @@ function App() {
         <Showcase />
         <Body />
       </Route>
-      <Route path="/login">
+      <Route path="/auth">
         <Authentication />
       </Route>
       <Route path="/">

@@ -1,9 +1,21 @@
 import React from 'react';
 import './Authentication.css';
 
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    Redirect,
+    useRouteMatch
+  } from "react-router-dom";
+
 import Login from './Login';
+import Signup from './Signup';
 
 const Authentication = () => {
+    let match = useRouteMatch();
+
     return (
         <div className="authContainer">
             <div className="authBody">
@@ -18,7 +30,17 @@ const Authentication = () => {
                 </div>
                 <div className="authColTwo">
                 <div className="authColTwoHolder">
-                    <Login />
+                <Switch>
+                    <Route exact path={`${match.path}/signup`}>
+                        <Signup />
+                    </Route>
+                    <Route exact path={match.path}>
+                        <Login />
+                    </Route>
+                    <Route path='/'>
+                        <Redirect to={`${match.path}`} />
+                    </Route>
+                </Switch>
                 </div>
                 </div>
             </div>

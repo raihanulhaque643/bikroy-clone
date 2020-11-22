@@ -1,8 +1,14 @@
 import React from 'react';
 import './Login.css';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import {
+    useHistory
+  } from "react-router-dom";
 
 const Login = () => {
+    const history = useHistory();
+    // let match = useRouteMatch();
+
     return (
         <div>
             <Formik
@@ -51,7 +57,7 @@ const Login = () => {
              Login
            </button>
            <h5 style={{textAlign: 'center'}}>Don't have an account yet?</h5>
-           <button className="redirectToSignup" >
+           <button className="redirectToSignup" onClick={() => {history.push('auth/signup')}} >
              Sign up
            </button>
         </div>

@@ -16,7 +16,7 @@ const Header = () => {
                 <div className="allAdsLink">All ads</div>
             </div>
             <div className="headerRight">
-                <div className="loginButton" onClick={()=>{history.push('/login')}}>
+                <div className="loginButton" onClick={()=>{history.push('/auth')}}>
                     Log in
                 </div>
                 <div className="postYourAdButtonContainer">
