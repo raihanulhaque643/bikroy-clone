@@ -1,16 +1,22 @@
 import React from 'react';
 import '../components/Header.css'
 
+import {
+    useHistory
+  } from "react-router-dom";
+
 const Header = () => {
+    const history = useHistory();
+
     return (
         <div className="headerContainer">
             <div className="header">
             <div className="headerLeft">
-                <div className="logo">Bikryo.com</div>
+                <div className="logo" onClick={()=>{history.push('/home')}}>Bikryo.com</div>
                 <div className="allAdsLink">All ads</div>
             </div>
             <div className="headerRight">
-                <div className="loginButton">
+                <div className="loginButton" onClick={()=>{history.push('/login')}}>
                     Log in
                 </div>
                 <div className="postYourAdButtonContainer">
