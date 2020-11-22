@@ -39,6 +39,12 @@
     width: 350px;
 }
 
+.authColOneHolder > p {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
 .authColTwo {
     display: flex;
     align-items: flex-start;
