@@ -1,0 +1,54 @@
+.signupFormHolder {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.inputSection {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
+
+.inputSection > input {
+    padding: 8px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid lightslategray;
+}
+
+.login {
+    padding: 8px;
+    background-color: #5bb8a4;
+    border-radius: 4px;
+    color: white;
+    font-size: 18px;
+    outline: none;
+    border: none;
+}
+
+.login:hover {
+    cursor: pointer;
+    background-color: #53ad9a;
+}
+
+.login:active {
+    background-color: #438b7c;
+}
+
+.redirectToSignup {
+    padding: 8px;
+    border-radius: 4px;
+    color: rgba(0, 0, 0, 0.692);
+    font-size: 18px;
+    outline: none;
+    border: none;
+}
+
+.redirectToSignup:hover {
+    cursor: pointer;
+}
+
+.redirectToSignup:active {
+    border: 2px solid black;
+}
