@@ -52,3 +52,19 @@
 .redirectToSignup:active {
     border: 2px solid black;
 }
+
+.fb-login-button {
+    width: 100%;
+}
+
+.fb-login-button > button {
+    width: 100%;
+    background-color: #3b5999;
+    color: white;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}

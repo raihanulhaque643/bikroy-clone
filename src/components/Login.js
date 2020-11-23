@@ -5,13 +5,20 @@ import {
     useHistory
   } from "react-router-dom";
 
+  import { signInWithFacebook } from '../firebase/firebase';
+
 const Login = () => {
     const history = useHistory();
     // let match = useRouteMatch();
 
+    const handleFacebookButton = (e) => {
+      e.preventDefault();
+      signInWithFacebook()
+    }
+
     return (
         <div>
-            <Formik
+        <Formik
        initialValues={{ email: '', password: '' }}
        validate={values => {
          const errors = {};
@@ -40,6 +47,17 @@ const Login = () => {
        {({ isSubmitting }) => (
          <Form>
          <div className="loginFormHolder">
+         <div className="inputSection" style={{marginBottom: '0px'}}>
+              <div className="fb-login-button">
+              <button 
+              style={{display:'flex', justifyContent: 'center', alignItems: 'center'}}
+              onClick={handleFacebookButton}
+              >
+              <img src="facebook.svg" style={{height: 'auto', width: '24px'}} alt=""/> Continue with Facebook
+              </button>
+              </div>
+              <h5 style={{color: 'grey', textAlign: 'center', fontSize: '16px', margin: '8px'}}>or</h5>
+        </div>
          <div className="inputSection">
             <span style={{marginBottom: '6px'}}>Email</span>
             <Field 
