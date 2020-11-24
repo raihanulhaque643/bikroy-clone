@@ -1,12 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../components/Header.css'
 
-import {
-    useHistory
-  } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import { useEffect } from 'react';
+import { logOut } from '../firebase/firebase';
 
 const Header = () => {
     const history = useHistory();
+
+    const [content, setContent] = useState(
+        <div className="loginButton" onClick={()=>{history.push('/auth')}}>
+            Log in
+        </div>
+    );
+
+    useEffect(() => {
+        function checkData() {
+            const name = localStorage.getItem('name')
+            if(name) {
+                setContent(
+                    <div style={{display: 'flex'}}>
+                        <div>{name}</div>
+                        <div className="loginButton" onClick={()=>{logOut()}}>
+                            Log out
+                        </div>
+                    </div>
+                )
+            } else {
+                setContent(
+                    <div className="loginButton" onClick={()=>{history.push('/auth')}}>
+                    Log in
+                    </div>
+                )
+            }
+        }
+        window.addEventListener('storage', checkData());
+
+        return () => {
+            window.removeEventListener('storage', checkData());
+        }
+    }, [])
 
     return (
         <div className="headerContainer">
@@ -16,9 +49,7 @@ const Header = () => {
                 <div className="allAdsLink">All ads</div>
             </div>
             <div className="headerRight">
-                <div className="loginButton" onClick={()=>{history.push('/auth')}}>
-                    Log in
-                </div>
+                {content}
                 <div className="postYourAdButtonContainer">
                     <button className="postYourAdButton">Post your ad</button>
                 </div>

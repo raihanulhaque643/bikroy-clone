@@ -27,6 +27,9 @@ const firebaseConfig = {
     var token = result.credential.accessToken;
     // The signed-in user info.
     var user = result.user;
+    localStorage.setItem('name', user.displayName);
+    localStorage.setItem('email', user.email);
+    localStorage.setItem('photo', user.photoURL);
     console.log(user);
     // ...
   }).catch(function(error) {
@@ -40,4 +43,15 @@ const firebaseConfig = {
     var credential = error.credential;
     // ...
   });
+}
+
+export const logOut = () => { firebase.auth().signOut().then(function() {
+  // Sign-out successful.
+  localStorage.removeItem('name');
+  localStorage.removeItem('email');
+  localStorage.removeItem('photo');
+}).catch(function(error) {
+  console.log(error.message);
+  // An error happened.
+});
 }
