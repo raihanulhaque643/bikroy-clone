@@ -15,11 +15,11 @@ const Header = () => {
     );
 
     useEffect(() => {
-        const name = localStorage.getItem('name')
-        if(name) {
+        const email = localStorage.getItem('email')
+        if(email) {
             setContent(
                 <div style={{display: 'flex'}}>
-                    <div>{name}</div>
+                    <div>{email}</div>
                     <div className="loginButton" onClick={()=>{logOut()}}>
                         Log out
                     </div>
