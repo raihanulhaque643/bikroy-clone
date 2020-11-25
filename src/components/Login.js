@@ -6,6 +6,7 @@ import {
   } from "react-router-dom";
 
   import { signInWithFacebook } from '../firebase/firebase';
+import firebase from "firebase/app";
 
 const Login = () => {
     const history = useHistory();
@@ -38,10 +39,21 @@ const Login = () => {
          return errors;
        }}
        onSubmit={(values, { setSubmitting }) => {
-         setTimeout(() => {
-           alert(JSON.stringify(values, null, 2));
-           setSubmitting(false);
-         }, 400);
+        firebase.auth().signInWithEmailAndPassword(values.email, values.password)
+        .then((user) => {
+          // Signed in 
+          localStorage.setItem('name', user.user.email);
+          console.log("Login successful");
+          history.push('/');
+          window.location.reload();
+        })
+        .catch((error) => {
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          console.error(error.message);
+          alert(error.message);
+          window.location.reload();
+        });
        }}
      >
        {({ isSubmitting }) => (
@@ -71,7 +83,7 @@ const Login = () => {
          <Field type="password" name="password" placeholder="Password" />
            <ErrorMessage name="password" component="div" style={{color: 'red', fontSize: '14px'}} />
          </div>
-           <button type="submit" disabled={isSubmitting} className="login" >
+           <button type="submit" disabled={isSubmitting} className="login">
              Login
            </button>
            <h5 style={{textAlign: 'center'}}>Don't have an account yet?</h5>

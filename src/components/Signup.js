@@ -2,9 +2,26 @@ import React from 'react';
 import './Login.css';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { useHistory } from "react-router-dom";
+import firebase from "firebase/app";
 
 const Signup = () => {
     const history = useHistory();
+
+     const signUpWithEmailAndPassword = (email, password) => { firebase.auth().createUserWithEmailAndPassword(email, password)
+      .then((user) => {
+        // Signed in 
+        console.log("Sign up successful");
+        alert("Sign up successful");
+        history.push('/auth');
+      })
+      .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.error(error.message);
+        alert(error.message)
+        // ..
+      });
+    }
 
     return (
         <div>
@@ -39,10 +56,7 @@ const Signup = () => {
          return errors;
        }}
        onSubmit={(values, { setSubmitting }) => {
-         setTimeout(() => {
-           alert(JSON.stringify(values, null, 2));
-           setSubmitting(false);
-         }, 400);
+        signUpWithEmailAndPassword(values.email, values.password)
        }}
      >
        {({ isSubmitting }) => (
@@ -77,6 +91,7 @@ const Signup = () => {
            <button type="submit" disabled={isSubmitting} className="login" >
              Sign up
            </button>
+           <ErrorMessage name="signup" component="div" style={{color: 'red', fontSize: '14px'}} />
            <h5 style={{textAlign: 'center'}}>Already have an account?</h5>
            <button className="redirectToSignup" onClick={() => {history.push('auth')}} >
             Login

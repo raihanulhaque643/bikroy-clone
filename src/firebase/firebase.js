@@ -57,3 +57,17 @@ export const logOut = () => { firebase.auth().signOut().then(function() {
   // An error happened.
 });
 }
+
+export const signUpWithEmailAndPassword = (email, password) => { firebase.auth().createUserWithEmailAndPassword(email, password)
+  .then((user) => {
+    // Signed in 
+    console.log("Sign up successful");
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    console.error(error.message);
+    alert(error.message)
+    // ..
+  });
+}
