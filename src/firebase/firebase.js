@@ -30,6 +30,7 @@ const firebaseConfig = {
     localStorage.setItem('name', user.displayName);
     localStorage.setItem('email', user.email);
     localStorage.setItem('photo', user.photoURL);
+    window.location.reload();
     console.log(user);
     // ...
   }).catch(function(error) {
@@ -50,6 +51,7 @@ export const logOut = () => { firebase.auth().signOut().then(function() {
   localStorage.removeItem('name');
   localStorage.removeItem('email');
   localStorage.removeItem('photo');
+  window.location.reload();
 }).catch(function(error) {
   console.log(error.message);
   // An error happened.

@@ -15,29 +15,22 @@ const Header = () => {
     );
 
     useEffect(() => {
-        function checkData() {
-            const name = localStorage.getItem('name')
-            if(name) {
-                setContent(
-                    <div style={{display: 'flex'}}>
-                        <div>{name}</div>
-                        <div className="loginButton" onClick={()=>{logOut()}}>
-                            Log out
-                        </div>
+        const name = localStorage.getItem('name')
+        if(name) {
+            setContent(
+                <div style={{display: 'flex'}}>
+                    <div>{name}</div>
+                    <div className="loginButton" onClick={()=>{logOut()}}>
+                        Log out
                     </div>
-                )
-            } else {
-                setContent(
-                    <div className="loginButton" onClick={()=>{history.push('/auth')}}>
-                    Log in
-                    </div>
-                )
-            }
-        }
-        window.addEventListener('storage', checkData());
-
-        return () => {
-            window.removeEventListener('storage', checkData());
+                </div>
+            )
+        } else {
+            setContent(
+                <div className="loginButton" onClick={()=>{history.push('/auth')}}>
+                Log in
+                </div>
+            )
         }
     }, [])
 
