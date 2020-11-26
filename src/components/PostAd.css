@@ -17,7 +17,64 @@
     background-color: white;
     border-radius: 4px;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 20px 0px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 40px;
+}
+
+.postAdHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.postAdMain {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.postAdBodyColumn {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    /* border: 1px solid rgb(211, 211, 211); */
+    width: 100%;
+    padding: 15px 0px;
+}
+
+.postAdBodyColumnHeading {
+    display: flex;
+    align-items: center;
+}
+
+.postAdBodyColumnHeading > span {
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.postAdBodyColumnHeading > img {
+    height: auto;
+    width: 30px;
+}
+
+.postAdBodyColumn > div {
+    border: 1px solid rgb(230, 230, 230);
+    border-top: none;
+    padding: 10px;
+}
+
+.postAdBodyColumn div > a {
+    text-decoration: none;
+    color: #0074ba;
+    margin: 8px 0px;
+}
+
+.postAdBodyColumn > a:hover {
+    text-decoration: none;
+    color: #00547e;
 }
