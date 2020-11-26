@@ -14,7 +14,7 @@ const Login = () => {
 
     const handleFacebookButton = (e) => {
       e.preventDefault();
-      signInWithFacebook()
+      signInWithFacebook();
     }
 
     return (
@@ -42,7 +42,7 @@ const Login = () => {
         firebase.auth().signInWithEmailAndPassword(values.email, values.password)
         .then((user) => {
           // Signed in 
-          localStorage.setItem('name', user.user.email);
+          localStorage.setItem('email', user.user.email);
           console.log("Login successful");
           history.push('/');
           window.location.reload();

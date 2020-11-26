@@ -15,6 +15,7 @@ import Showcase from './components/Showcase';
 import Body from './components/Body';
 import Footer from './components/Footer';
 import Authentication from './components/Authentication';
+import PostAd from './components/PostAd';
 
 function App() {
   return (
@@ -28,6 +29,13 @@ function App() {
       </Route>
       <Route path="/auth">
         <Authentication />
+      </Route>
+      <Route path="/post-ad">
+      {
+        localStorage.getItem('email') ? 
+        <PostAd /> :
+        <Redirect to="/" />
+      }
       </Route>
       <Route path="/">
       <Redirect to="/home" />

@@ -1,8 +1,21 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import './Body.css';
 import CategoryItem from './CategoryItem';
 
 const Body = () => {
+    const history = useHistory();
+
+    const handlePostAdButton = () => {
+        const user = localStorage.getItem('email');
+        if (user) {
+            history.push('/post-ad');
+        } else {
+            history.push('/auth');
+            window.scrollTo(0, 0);
+        }
+    }
+
     return (
         <div className="bodyContainer">
             <div className="bodyMainColumn">
@@ -59,7 +72,7 @@ const Body = () => {
                 <div className="bodyFooter">
                     <p style={{fontSize: '26px', marginTop: '40px'}}>Do you have something to sell?</p>
                     <p style={{fontSize: '20px', marginTop: '0px'}}>Post your ad on Bikryo.com</p>
-                    <p><button className="bodyFooterButton">Post an ad now!</button></p>
+                    <p><button className="bodyFooterButton" onClick={()=>{handlePostAdButton()}}>Post an ad now!</button></p>
                 </div>
             </div>
         </div>

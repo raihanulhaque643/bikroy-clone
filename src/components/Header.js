@@ -27,12 +27,22 @@ const Header = () => {
             )
         } else {
             setContent(
-                <div className="loginButton" onClick={()=>{history.push('/auth')}}>
+                <div className="loginButton" 
+                onClick={()=>{history.push('/auth')}}>
                 Log in
                 </div>
             )
         }
     }, [])
+
+    const handlePostAdButton = () => {
+        const user = localStorage.getItem('email');
+        if (user) {
+            history.push('/post-ad');
+        } else {
+            history.push('/auth');
+        }
+    }
 
     return (
         <div className="headerContainer">
@@ -44,7 +54,10 @@ const Header = () => {
             <div className="headerRight">
                 {content}
                 <div className="postYourAdButtonContainer">
-                    <button className="postYourAdButton">Post your ad</button>
+                    <button 
+                    className="postYourAdButton"  
+                    onClick={()=>{handlePostAdButton()}}>
+                    Post your ad</button>
                 </div>
             </div>
             </div>

@@ -1,0 +1,23 @@
+.postAdContainer {
+    width: 100%;
+    background: #e7edee;
+    box-sizing: border-box;
+    min-height: 365px;
+    max-height: auto;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid green;
+    padding-bottom: 25px;
+}
+
+.postAdBody {
+    width: 984px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px 0px;
+}
