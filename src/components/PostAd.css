@@ -35,3 +35,19 @@
     width: 100%;
     justify-content: space-between;
 }
+
+.postAdFooter {
+    margin: 20px 0px;
+}
+
+.postAdFooter > a {
+    text-decoration: none;
+    color: #0074ba;
+    padding: 0px 20px;
+    font-size: 13px;
+}
+
+.postAdFooter > a:hover {
+    text-decoration: none;
+    color: #00547e;
+}

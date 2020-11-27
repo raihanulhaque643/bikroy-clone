@@ -39,6 +39,7 @@ const PostAd = () => {
                 linkTwo="Looking for something to buy"
                 hrefTwo="#"
                  />
+
                     {/* <div className="postAdBodyColumn">
                         <div className="postAdBodyColumnHeading"
                         style={{borderTop: '1px solid rgb(230, 230, 230)'}}
@@ -82,7 +83,11 @@ const PostAd = () => {
                         </div>
                     </div> */}
                 </div>
-
+                <div className="postAdFooter">
+                    <a href="#">Know your posting allowance</a>
+                    <span style={{color: '#0074ba'}}>|</span>
+                    <a href="#">See our posting rules</a>
+                </div>
             </div>
         </div>
     )
