@@ -1,5 +1,6 @@
 import React from 'react';
 import './PostAd.css';
+import PostAdCategory from './PostAdCategory';
 
 const PostAd = () => {
 
@@ -14,7 +15,31 @@ const PostAd = () => {
                 </div>
 
                 <div className="postAdMain">
-                    <div className="postAdBodyColumn">
+                <PostAdCategory 
+                title="Sell something"
+                titleImage="cash.svg"
+                linkOne="Sell an item, property or service"
+                hrefOne="#"
+                linkTwo="Offer a property for rent"
+                hrefTwo="#"
+                 />
+                 <PostAdCategory 
+                title="Post a job vacancy"
+                titleImage="briefcase.svg"
+                linkOne="Post a job in Bikryo"
+                hrefOne="#"
+                linkTwo="Post a job overseas"
+                hrefTwo="#"
+                 />
+                 <PostAdCategory 
+                title="Looking for something"
+                titleImage="earthLook.svg"
+                linkOne="Looking for property to rent"
+                hrefOne="#"
+                linkTwo="Looking for something to buy"
+                hrefTwo="#"
+                 />
+                    {/* <div className="postAdBodyColumn">
                         <div className="postAdBodyColumnHeading"
                         style={{borderTop: '1px solid rgb(230, 230, 230)'}}
                         >
@@ -55,7 +80,7 @@ const PostAd = () => {
                         <div className="linkArrowHolder"><a href="#">Looking for something to buy</a>
                         <img className="rightArrow" src="right-arrow.svg" alt=""/>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
             </div>
