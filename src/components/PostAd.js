@@ -21,28 +21,40 @@ const PostAd = () => {
                             <img src="cash.svg" alt=""/>
                             <span>Sell something</span>
                         </div>
-                        <div><a href="#">Sell an item,property or service</a></div>
-                        <div><a href="#">Offer a property for rent</a></div>
+                        <div className="linkArrowHolder"><a href="#">Sell an item, property or service</a>
+                        <img className="rightArrow" src="right-arrow.svg" alt=""/>
+                        </div>
+                        <div className="linkArrowHolder"><a href="#">Offer a property for rent</a>
+                        <img className="rightArrow" src="right-arrow.svg" alt=""/>
+                        </div>
                     </div>
                     <div className="postAdBodyColumn">
                         <div className="postAdBodyColumnHeading"
                         style={{borderTop: '1px solid rgb(230, 230, 230)'}}
                         >
                             <img src="briefcase.svg" alt=""/>
-                            <span>Sell something</span>
+                            <span>Post a job vacancy</span>
                         </div>
-                        <div><a href="#">Sell an item,property or service</a></div>
-                        <div><a href="#">Offer a property for rent</a></div>
+                        <div className="linkArrowHolder"><a href="#">Post a job in Bikryo</a>
+                        <img className="rightArrow" src="right-arrow.svg" alt=""/>
+                        </div>
+                        <div className="linkArrowHolder"><a href="#">Post a job overseas</a>
+                        <img className="rightArrow" src="right-arrow.svg" alt=""/>
+                        </div>
                     </div>
                     <div className="postAdBodyColumn">
                         <div className="postAdBodyColumnHeading"
                         style={{borderTop: '1px solid rgb(230, 230, 230)'}}
                         >
                             <img src="earthLook.svg" alt=""/>
-                            <span>Sell something</span>
+                            <span>Looking for something</span>
                         </div>
-                        <div><a href="#">Sell an item,property or service</a></div>
-                        <div><a href="#">Offer a property for rent</a></div>
+                        <div className="linkArrowHolder"><a href="#">Looking for property to rent</a>
+                        <img className="rightArrow" src="right-arrow.svg" alt=""/>
+                        </div>
+                        <div className="linkArrowHolder"><a href="#">Looking for something to buy</a>
+                        <img className="rightArrow" src="right-arrow.svg" alt=""/>
+                        </div>
                     </div>
                 </div>
 

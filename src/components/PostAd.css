@@ -78,3 +78,15 @@
     text-decoration: none;
     color: #00547e;
 }
+
+.linkArrowHolder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rightArrow {
+    height: auto;
+    width: 20px;
+    opacity: 0.4;
+}
