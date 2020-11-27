@@ -1,9 +1,9 @@
-.setItemModalColumn {
+.modalColumn {
     width: 100%;
     padding: 5px;
 }
 
-.setItemModalColumn > button {
+.modalColumn > button {
     width: 100%;
     border: 0px;
     outline: none;
@@ -13,25 +13,25 @@
     border-bottom: 1px solid lightgray;
 }
 
-.setItemModalColumn > button:hover {
+.modalColumn > button:hover {
     color: #00547e;
 
 }
 
 
-.setItemModalColumnRow {
+.modalColumnRow {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 100%;
 }
 
-.setItemModalColumnRow > img {
+.modalColumnRow > img {
     height: auto;
     width: 18px;
 }
 
-.setItemModalColumnRow > span {
+.modalColumnRow > span {
     font-size: 15px;
     margin: 10px 10px;
 }

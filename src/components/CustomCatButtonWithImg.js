@@ -3,9 +3,9 @@ import './CustomCatButtonWithImg.css';
 
 const CustomCatButtonWithImg = (props) => {
     return (
-        <div className="setItemModalColumn">
+        <div className="modalColumn">
             <button>
-                <div className="setItemModalColumnRow">
+                <div className="modalColumnRow">
                     <img src={props.image} alt=""/>
                     <span>{props.title}</span>
                     <img

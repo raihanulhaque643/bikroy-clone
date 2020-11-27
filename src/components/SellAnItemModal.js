@@ -9,8 +9,8 @@ function SellAnItemContent() {
   const [value, setValue] = useState();
 
   return (
-    <div className="sellItemModalContainer">
-        <div className="setItemModalColumn">
+    <div className="modalContainer">
+        <div className="modalColumn">
         <CustomCatButtonWithImg
         title="Essentials"
         image="groceries.svg"
@@ -64,8 +64,8 @@ function SellAnItemContent() {
         image="agriculture.svg"
         />
         </div>
-        <div className="setItemModalColumn">
-            hello
+        <div className="modalColumn">
+            
         </div>
     </div>
   );

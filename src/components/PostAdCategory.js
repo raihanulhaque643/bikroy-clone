@@ -1,6 +1,7 @@
 import React from 'react';
 import './PostAdCategory.css';
 import SellAnItemModal from './SellAnItemModal';
+import OfferAPropertyModal from './OfferAPropertyModal';
 
 const PostAdCategory = (props) => {
     return (
@@ -19,7 +20,7 @@ const PostAdCategory = (props) => {
             </div>
             <div className="linkArrowHolder">
             {/* <a href={props.hrefTwo}>{props.linkTwo}</a> */}
-            <button>{props.buttonTwo}</button>
+            <OfferAPropertyModal name={props.buttonTwo} />
             <img className="rightArrow" src="right-arrow.svg" alt=""/>
             </div>
         </div>
