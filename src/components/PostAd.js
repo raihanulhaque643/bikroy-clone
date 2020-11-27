@@ -1,4 +1,5 @@
 import React from 'react';
+import LookingForAdCategory from './LookingForAdCategory';
 import './PostAd.css';
 import PostAdCategory from './PostAdCategory';
 import SellAnItem from './SellAnItemModal';
@@ -28,7 +29,7 @@ const PostAd = () => {
                 buttonOne="Post a job in Bikryo"
                 buttonTwo="Post a job overseas"
                  />
-                 <PostAdCategory 
+                 <LookingForAdCategory 
                 title="Looking for something"
                 titleImage="earthLook.svg"
                 buttonOne="Looking for property to rent"
