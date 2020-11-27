@@ -31,13 +31,15 @@
     padding: 10px;
 }
 
-.postAdBodyColumn div > a {
+.postAdBodyColumn div > button {
     text-decoration: none;
     color: #0074ba;
-    margin: 8px 0px;
+    background: white;
+    border: none;
+    cursor: pointer;
 }
 
-.postAdBodyColumn > a:hover {
+.postAdBodyColumn > button:hover {
     text-decoration: none;
     color: #00547e;
 }

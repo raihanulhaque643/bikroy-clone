@@ -11,11 +11,13 @@ const PostAdCategory = (props) => {
                 <span>{props.title}</span>
             </div>
             <div className="linkArrowHolder">
-            <a href={props.hrefOne}>{props.linkOne}</a>
+            {/* <a href={props.hrefOne}>{props.linkOne}</a> */}
+            <button>{props.buttonOne}</button>
             <img className="rightArrow" src="right-arrow.svg" alt=""/>
             </div>
             <div className="linkArrowHolder">
-            <a href={props.hrefTwo}>{props.linkTwo}</a>
+            {/* <a href={props.hrefTwo}>{props.linkTwo}</a> */}
+            <button>{props.buttonTwo}</button>
             <img className="rightArrow" src="right-arrow.svg" alt=""/>
             </div>
         </div>

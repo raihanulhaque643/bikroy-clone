@@ -18,26 +18,20 @@ const PostAd = () => {
                 <PostAdCategory 
                 title="Sell something"
                 titleImage="cash.svg"
-                linkOne="Sell an item, property or service"
-                hrefOne="#"
-                linkTwo="Offer a property for rent"
-                hrefTwo="#"
+                buttonOne="Sell an item, property or service"
+                buttonTwo="Offer a property for rent"
                  />
                  <PostAdCategory 
                 title="Post a job vacancy"
                 titleImage="briefcase.svg"
-                linkOne="Post a job in Bikryo"
-                hrefOne="#"
-                linkTwo="Post a job overseas"
-                hrefTwo="#"
+                buttonOne="Post a job in Bikryo"
+                buttonTwo="Post a job overseas"
                  />
                  <PostAdCategory 
                 title="Looking for something"
                 titleImage="earthLook.svg"
-                linkOne="Looking for property to rent"
-                hrefOne="#"
-                linkTwo="Looking for something to buy"
-                hrefTwo="#"
+                buttonOne="Looking for property to rent"
+                buttonTwo="Looking for something to buy"
                  />
 
                     {/* <div className="postAdBodyColumn">
