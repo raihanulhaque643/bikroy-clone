@@ -1,6 +1,7 @@
 import React from 'react';
 import './PostAd.css';
 import PostAdCategory from './PostAdCategory';
+import SellAnItem from './SellAnItemModal';
 
 const PostAd = () => {
 
