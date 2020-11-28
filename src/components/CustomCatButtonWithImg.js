@@ -4,7 +4,6 @@ import './CustomCatButtonWithImg.css';
 const CustomCatButtonWithImg = (props) => {
     return (
         <div className="modalColumn">
-            <button>
                 <div className="modalColumnRow">
                     <img src={props.image} alt=""/>
                     <span>{props.title}</span>
@@ -12,7 +11,6 @@ const CustomCatButtonWithImg = (props) => {
                     style={{marginLeft: 'auto', opacity:'0.5'}}
                      src="right-arrow.svg" alt=""/>
                 </div>
-            </button>
         </div>
     )
 }
