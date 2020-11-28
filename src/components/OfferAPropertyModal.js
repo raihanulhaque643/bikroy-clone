@@ -11,24 +11,36 @@ function OfferAPropertyContent() {
   return (
     <div className="modalContainer">
         <div className="modalColumn">
+        <button>
         <CustomCatButton
         title="Apartments & Flats"
         />
+        </button>
+        <button>
         <CustomCatButton
         title="Houses"
         />
+        </button>
+        <button>
         <CustomCatButton
         title="Plots & Land"
         />
+        </button>
+        <button>
         <CustomCatButton
         title="Rooms"
         />
+        </button>
+        <button>
         <CustomCatButton
         title="Garages"
         />
+        </button>
+        <button>
         <CustomCatButton
         title="Commercial Property"
         />
+        </button>
         </div>
         <div className="modalColumn">
             
