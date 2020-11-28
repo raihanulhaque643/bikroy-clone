@@ -2,6 +2,7 @@ import React from 'react';
 import LookingForAdCategory from './LookingForAdCategory';
 import './PostAd.css';
 import PostAdCategory from './PostAdCategory';
+import PostJobCategory from './PostJobCategory';
 import SellAnItem from './SellAnItemModal';
 
 const PostAd = () => {
@@ -23,7 +24,7 @@ const PostAd = () => {
                 buttonOne="Sell an item, property or service"
                 buttonTwo="Offer a property for rent"
                  />
-                 <PostAdCategory 
+                 <PostJobCategory 
                 title="Post a job vacancy"
                 titleImage="briefcase.svg"
                 buttonOne="Post a job in Bikryo"

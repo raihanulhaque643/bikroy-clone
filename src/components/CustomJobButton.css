@@ -1,0 +1,35 @@
+.jobColumn {
+    width: 100%;
+}
+
+.jobColumn > button {
+    width: 100%;
+    height: 50px;
+    border: 0px;
+    outline: none;
+    background: white;
+    cursor: pointer;
+    color: #0074ba;
+    border-bottom: 1px solid lightgray;
+}
+
+.jobColumn > button:hover {
+    color: #00547e;
+}
+
+.jobColumnRow {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.jobColumnRow > img {
+    height: auto;
+    width: 18px;
+}
+
+.jobColumnRow > span {
+    font-size: 14px;
+    margin: 10px 10px;
+}
