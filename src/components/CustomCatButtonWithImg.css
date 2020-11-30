@@ -7,12 +7,19 @@
     height: 35px;
     background: white;
     cursor: pointer;
-    color: red;
     margin-bottom: 2px;
+    padding-bottom: 35px;
+    outline: none;
 }
 
 .modalColumn > button:hover {
     color: #00547e;
+}
+
+.modalColumn > button:focus {
+    color: #00547e;
+    border: 2px solid black;
+    border-radius: 8px;
 }
 
 .modalColumnRow {
