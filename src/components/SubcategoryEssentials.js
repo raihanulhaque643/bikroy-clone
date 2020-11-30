@@ -1,12 +1,20 @@
 import React from 'react';
 import './CustomCatButtonWithImg.css';
 import CustomCatButton from './CustomCatButton';
+import { useHistory } from 'react-router-dom';
 
 const SubcategoryEssentials = () => {
+
+    const history = useHistory();
+
+    const handleClick = () => {
+        history.push('/auth')
+    }
+
     return (
         <div className="modalContainer">
             <div className="modalColumn">
-            <button>
+            <button onClick={()=>{handleClick()}}>
                 <CustomCatButton
                 title="Grocery"
                 />

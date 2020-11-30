@@ -22,14 +22,18 @@ function App() {
     <Router>
     <div className="App">
     <Header />
+
     <Switch>
+    
       <Route path="/home">
         <Showcase />
         <Body />
       </Route>
+
       <Route path="/auth">
         <Authentication />
       </Route>
+
       <Route path="/post-ad">
       {
         localStorage.getItem('email') ? 
@@ -37,10 +41,13 @@ function App() {
         <Redirect to="/" />
       }
       </Route>
+
       <Route path="/">
       <Redirect to="/home" />
       </Route>
+
     </Switch>
+
       <Footer />
     </div>
     </Router>

@@ -1,9 +1,6 @@
 import React from 'react';
-import LookingForAdCategory from './LookingForAdCategory';
 import './PostAd.css';
 import PostAdCategory from './PostAdCategory';
-import PostJobCategory from './PostJobCategory';
-import SellAnItem from './SellAnItemModal';
 
 const PostAd = () => {
 
@@ -24,61 +21,6 @@ const PostAd = () => {
                 buttonOne="Sell an item, property or service"
                 buttonTwo="Offer a property for rent"
                  />
-                 <PostJobCategory 
-                title="Post a job vacancy"
-                titleImage="briefcase.svg"
-                buttonOne="Post a job in Bikryo"
-                buttonTwo="Post a job overseas"
-                 />
-                 <LookingForAdCategory 
-                title="Looking for something"
-                titleImage="earthLook.svg"
-                buttonOne="Looking for property to rent"
-                buttonTwo="Looking for something to buy"
-                 />
-
-                    {/* <div className="postAdBodyColumn">
-                        <div className="postAdBodyColumnHeading"
-                        style={{borderTop: '1px solid rgb(230, 230, 230)'}}
-                        >
-                            <img src="cash.svg" alt=""/>
-                            <span>Sell something</span>
-                        </div>
-                        <div className="linkArrowHolder"><a href="#">Sell an item, property or service</a>
-                        <img className="rightArrow" src="right-arrow.svg" alt=""/>
-                        </div>
-                        <div className="linkArrowHolder"><a href="#">Offer a property for rent</a>
-                        <img className="rightArrow" src="right-arrow.svg" alt=""/>
-                        </div>
-                    </div>
-                    <div className="postAdBodyColumn">
-                        <div className="postAdBodyColumnHeading"
-                        style={{borderTop: '1px solid rgb(230, 230, 230)'}}
-                        >
-                            <img src="briefcase.svg" alt=""/>
-                            <span>Post a job vacancy</span>
-                        </div>
-                        <div className="linkArrowHolder"><a href="#">Post a job in Bikryo</a>
-                        <img className="rightArrow" src="right-arrow.svg" alt=""/>
-                        </div>
-                        <div className="linkArrowHolder"><a href="#">Post a job overseas</a>
-                        <img className="rightArrow" src="right-arrow.svg" alt=""/>
-                        </div>
-                    </div>
-                    <div className="postAdBodyColumn">
-                        <div className="postAdBodyColumnHeading"
-                        style={{borderTop: '1px solid rgb(230, 230, 230)'}}
-                        >
-                            <img src="earthLook.svg" alt=""/>
-                            <span>Looking for something</span>
-                        </div>
-                        <div className="linkArrowHolder"><a href="#">Looking for property to rent</a>
-                        <img className="rightArrow" src="right-arrow.svg" alt=""/>
-                        </div>
-                        <div className="linkArrowHolder"><a href="#">Looking for something to buy</a>
-                        <img className="rightArrow" src="right-arrow.svg" alt=""/>
-                        </div>
-                    </div> */}
                 </div>
                 <div className="postAdFooter">
                     <a href="#">Know your posting allowance</a>

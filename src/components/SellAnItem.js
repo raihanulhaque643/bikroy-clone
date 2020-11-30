@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react';
-import { CustomDialog, useDialog } from 'react-st-modal';
+import { useState } from 'react';
 import CustomCatButtonWithImg from './CustomCatButtonWithImg';
-import './SellAnItemModal.css';
+import './SellAnItem.css';
 import './CustomCatButtonWithImg.css';
 
 import SubcategoryAgriculture from './SubcategoryAgriculture';
@@ -19,10 +18,7 @@ import SubcategoryServices from './SubcategoryServices';
 import SubcategoryVehicles from './SubcategoryVehicles';
 
 
-function SellAnItemContent() {
-  const dialog = useDialog();
-
-  const [value, setValue] = useState();
+function SellAnItem() {
 
   const [show_Essentials_Subcategory, set_show_Essentials_Subcategory] = useState(false);
   const [show_Mobiles_Subcategory, set_show_Mobiles_Subcategory] = useState(false);
@@ -383,23 +379,6 @@ function SellAnItemContent() {
               <SubcategoryAgriculture />
             }
         </div>
-    </div>
-  );
-}
-
-function SellAnItem(props) {
-  return (
-    <div>
-      <button
-        onClick={async () => {
-          const result = await CustomDialog(<SellAnItemContent />, {
-            title: 'Select a Category',
-            showCloseIcon: true,
-          });
-        }}
-      >
-        {props.name}
-      </button>
     </div>
   );
 }
