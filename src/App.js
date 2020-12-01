@@ -16,6 +16,7 @@ import Body from './components/Body';
 import Footer from './components/Footer';
 import Authentication from './components/Authentication';
 import PostAd from './components/PostAd';
+import PostAdForm from './components/PostAdForm';
 
 function App() {
   return (
@@ -38,6 +39,14 @@ function App() {
       {
         localStorage.getItem('email') ? 
         <PostAd /> :
+        <Redirect to="/" />
+      }
+      </Route>
+
+      <Route path="/post-ad-form/:subcategory">
+      {
+        localStorage.getItem('email') ? 
+        <PostAdForm /> :
         <Redirect to="/" />
       }
       </Route>
