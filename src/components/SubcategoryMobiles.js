@@ -8,19 +8,19 @@ const SubcategoryMobiles = () => {
     const history = useHistory();
 
     const handleMobilePhones = () => {
-        history.push('/post-ad-form/mobile-phones')
+        history.push('/post-ad-form/mobiles/mobile-phones')
     }
 
     const handleMobilePhoneAccessories = () => {
-        history.push('/post-ad-form/mobile-phone-accessories')
+        history.push('/post-ad-form/mobiles/mobile-phone-accessories')
     }
 
     const handleSimCards = () => {
-        history.push('/post-ad-form/sim-cards')
+        history.push('/post-ad-form/mobiles/sim-cards')
     }
 
     const handleMobilePhoneServices = () => {
-        history.push('/post-ad-form/mobile-phone-services')
+        history.push('/post-ad-form/mobiles/mobile-phone-services')
     }
 
     return (

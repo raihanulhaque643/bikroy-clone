@@ -8,31 +8,31 @@ const SubcategoryEssentials = () => {
     const history = useHistory();
 
     const handleGrocery = () => {
-        history.push('/post-ad-form/grocery')
+        history.push('/post-ad-form/essentials/grocery')
     }
 
     const handleFruitsVegetables = () => {
-        history.push('/post-ad-form/fruits-vegetables')
+        history.push('/post-ad-form/essentials/fruits-vegetables')
     }
 
     const handleMeatSeafood = () => {
-        history.push('/post-ad-form/meat-seafood')
+        history.push('/post-ad-form/essentials/meat-seafood')
     }
 
     const handleBabyProducts = () => {
-        history.push('/post-ad-form/baby-products')
+        history.push('/post-ad-form/essentials/baby-products')
     }
 
     const handleHealthcare = () => {
-        history.push('/post-ad-form/healthcare')
+        history.push('/post-ad-form/essentials/healthcare')
     }
 
     const handleHousehold = () => {
-        history.push('/post-ad-form/household')
+        history.push('/post-ad-form/essentials/household')
     }
 
     const handleOtherEssentials = () => {
-        history.push('/post-ad-form/other-essentials')
+        history.push('/post-ad-form/essentials/other-essentials')
     }
 
     return (

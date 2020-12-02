@@ -8,39 +8,39 @@ const SubcategoryHomeLiving = () => {
     const history = useHistory();
 
     const handleLivingRoomFurniture = () => {
-        history.push('/post-ad-form/living-room-furniture')
+        history.push('/post-ad-form/home-living/living-room-furniture')
     }
 
     const handleKitchenDiningFurniture = () => {
-        history.push('/post-ad-form/kitchen-dining-furniture')
+        history.push('/post-ad-form/home-living/kitchen-dining-furniture')
     }
 
     const handleBedroomFurniture = () => {
-        history.push('/post-ad-form/bedroom-furniture')
+        history.push('/post-ad-form/home-living/bedroom-furniture')
     }
 
     const handleOfficeShopFurniture = () => {
-        history.push('/post-ad-form/office-shop-furniture')
+        history.push('/post-ad-form/home-living/office-shop-furniture')
     }
 
     const handleChildrensFurniture = () => {
-        history.push('/post-ad-form/childrens-furniture')
+        history.push('/post-ad-form/home-living/childrens-furniture')
     }
 
     const handleAcsHomeElectronics = () => {
-        history.push('/post-ad-form/acs-home-electronics')
+        history.push('/post-ad-form/home-living/acs-home-electronics')
     }
 
     const handleHomeAppliances = () => {
-        history.push('/post-ad-form/home-appliances')
+        history.push('/post-ad-form/home-living/home-appliances')
     }
 
     const handleHouseholdItems = () => {
-        history.push('/post-ad-form/household-items')
+        history.push('/post-ad-form/home-living/household-items')
     }
 
     const handleHomeTextilesDecoration = () => {
-        history.push('/post-ad-form/home-textile-decoration')
+        history.push('/post-ad-form/home-living/home-textile-decoration')
     }
 
     return (

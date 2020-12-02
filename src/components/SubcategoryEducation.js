@@ -8,23 +8,23 @@ const SubcategoryEducation = () => {
     const history = useHistory();
 
     const handleTextbooks = () => {
-        history.push('/post-ad-form/textbooks')
+        history.push('/post-ad-form/education/textbooks')
     }
 
     const handleTuition = () => {
-        history.push('/post-ad-form/tuition')
+        history.push('/post-ad-form/education/tuition')
     }
 
     const handleCourses = () => {
-        history.push('/post-ad-form/courses')
+        history.push('/post-ad-form/education/courses')
     }
 
     const handleStudyAbroad = () => {
-        history.push('/post-ad-form/study-abroad')
+        history.push('/post-ad-form/education/study-abroad')
     }
 
     const handleOtherEducation = () => {
-        history.push('/post-ad-form/other-education')
+        history.push('/post-ad-form/education/other-education')
     }
 
     return (

@@ -7,6 +7,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 const PostAdForm = () => {
 
     let {subcategory} = useParams();
+    let {category} = useParams();
 
     return (
         <div className="postAdFormContainer">
@@ -16,12 +17,11 @@ const PostAdForm = () => {
               Fill in the details
             </div>
             <div className="postAdHeaderRight">
-            <img src="categoryTag.svg" alt=""/>
               {subcategory}
             </div>
          </div>
             <Formik
-       initialValues={{ subcategory: subcategory, title: '', description: '', price: '', negotiable: null, photo: null, contact: '' }}
+       initialValues={{ category: category, subcategory: subcategory, title: '', description: '', price: '', negotiable: null, photo: null, contact: '' }}
        validate={values => {
          const errors = {};
          if (!values.title) {

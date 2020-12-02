@@ -8,27 +8,27 @@ const SubcategoryHobbiesSportsKids = () => {
     const history = useHistory();
 
     const handleMusicalInstruments = () => {
-        history.push('/post-ad-form/musical-instruments')
+        history.push('/post-ad-form/hobbies-sports-kids/musical-instruments')
     }
 
     const handleSports = () => {
-        history.push('/post-ad-form/sports')
+        history.push('/post-ad-form/hobbies-sports-kids/sports')
     }
 
     const handleFitnessGym = () => {
-        history.push('/post-ad-form/fitness-gym')
+        history.push('/post-ad-form/hobbies-sports-kids/fitness-gym')
     }
 
     const handleMusicBooksMovies = () => {
-        history.push('/post-ad-form/music-books-movies')
+        history.push('/post-ad-form/hobbies-sports-kids/music-books-movies')
     }
 
     const handleChildrensItems = () => {
-        history.push('/post-ad-form/childrens-items')
+        history.push('/post-ad-form/hobbies-sports-kids/childrens-items')
     }
 
     const handleOtherHobbySportsKidsItems = () => {
-        history.push('/post-ad-form/other-hobby-sports-kids-items')
+        history.push('/post-ad-form/hobbies-sports-kids/other-hobby-sports-kids-items')
     }
 
     return (

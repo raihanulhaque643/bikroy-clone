@@ -8,27 +8,27 @@ const SubcategoryServices = () => {
     const history = useHistory();
 
     const handleBusinessTechnicalServices = () => {
-        history.push('/post-ad-form/business-technical-services')
+        history.push('/post-ad-form/services/business-technical-services')
     }
 
     const handleTravelVisa = () => {
-        history.push('/post-ad-form/travel-visa')
+        history.push('/post-ad-form/services/travel-visa')
     }
 
     const handleTickets = () => {
-        history.push('/post-ad-form/tickets')
+        history.push('/post-ad-form/services/tickets')
     }
 
     const handleEventsHospitality = () => {
-        history.push('/post-ad-form/event-hospitality')
+        history.push('/post-ad-form/services/event-hospitality')
     }
 
     const handleDomesticPersonal = () => {
-        history.push('/post-ad-form/domestic-personal')
+        history.push('/post-ad-form/services/domestic-personal')
     }
 
     const handleHealthLifestyle = () => {
-        history.push('/post-ad-form/health-lifestyle')
+        history.push('/post-ad-form/services/health-lifestyle')
     }
 
     return (

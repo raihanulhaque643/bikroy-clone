@@ -43,7 +43,7 @@ function App() {
       }
       </Route>
 
-      <Route path="/post-ad-form/:subcategory">
+      <Route path="/post-ad-form/:category/:subcategory">
       {
         localStorage.getItem('email') ? 
         <PostAdForm /> :

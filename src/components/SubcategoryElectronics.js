@@ -9,39 +9,39 @@ const SubcategoryElectronics = () => {
     const history = useHistory();
 
     const handleDesktopComputers = () => {
-        history.push('/post-ad-form/desktop-computers')
+        history.push('/post-ad-form/electronics/desktop-computers')
     }
 
     const handleLaptops = () => {
-        history.push('/post-ad-form/laptops')
+        history.push('/post-ad-form/electronics/laptops')
     }
 
     const handleLaptopComputerAccessories = () => {
-        history.push('/post-ad-form/laptop-computer-accessories')
+        history.push('/post-ad-form/electronics/laptop-computer-accessories')
     }
 
     const handleTabletsAccessories = () => {
-        history.push('/post-ad-form/tablet-accessories')
+        history.push('/post-ad-form/electronics/tablet-accessories')
     }
 
     const handleCamerasCamcordersAccessories = () => {
-        history.push('/post-ad-form/cameras-camcorders-accessories')
+        history.push('/post-ad-form/electronics/cameras-camcorders-accessories')
     }
 
     const handleAudioSoundSystems = () => {
-        history.push('/post-ad-form/audio-sound-systems')
+        history.push('/post-ad-form/electronics/audio-sound-systems')
     }
 
     const handleVideoGameConsolesAccessories = () => {
-        history.push('/post-ad-form/video-game-console-accessories')
+        history.push('/post-ad-form/electronics/video-game-console-accessories')
     }
 
     const handlePhotocopiers = () => {
-        history.push('/post-ad-form/photocopiers')
+        history.push('/post-ad-form/electronics/photocopiers')
     }
 
     const handleOtherElectronics = () => {
-        history.push('/post-ad-form/other-electronics')
+        history.push('/post-ad-form/electronics/other-electronics')
     }
 
     return (

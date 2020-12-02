@@ -8,31 +8,31 @@ const SubcategoryProperty = () => {
     const history = useHistory();
 
     const handleApartmentsFlats = () => {
-        history.push('/post-ad-form/apartments-flats')
+        history.push('/post-ad-form/property/apartments-flats')
     }
 
     const handleNewDevelopment = () => {
-        history.push('/post-ad-form/new-development')
+        history.push('/post-ad-form/property/new-development')
     }
 
     const handleHouses = () => {
-        history.push('/post-ad-form/houses')
+        history.push('/post-ad-form/property/houses')
     }
 
     const handlePlotsLand = () => {
-        history.push('/post-ad-form/plots-land')
+        history.push('/post-ad-form/property/plots-land')
     }
 
     const handleGarages = () => {
-        history.push('/post-ad-form/garages')
+        history.push('/post-ad-form/property/garages')
     }
 
     const handleCommercialProperty = () => {
-        history.push('/post-ad-form/commercial-property')
+        history.push('/post-ad-form/property/commercial-property')
     }
 
     const handlePropertyToolsServices = () => {
-        history.push('/post-ad-form/property-tools-services')
+        history.push('/post-ad-form/property/property-tools-services')
     }
 
     return (

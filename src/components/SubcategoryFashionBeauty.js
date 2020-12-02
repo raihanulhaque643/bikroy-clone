@@ -8,43 +8,43 @@ const SubcategoryFashionBeauty = () => {
     const history = useHistory();
 
     const handleMensClothingAccessories = () => {
-        history.push('/post-ad-form/mens-clothing-accessories')
+        history.push('/post-ad-form/fashion-beauty/mens-clothing-accessories')
     }
 
     const handleWomensClothingAccessories = () => {
-        history.push('/post-ad-form/womens-clothing-accessories')
+        history.push('/post-ad-form/fashion-beauty/womens-clothing-accessories')
     }
 
     const handleChildrensClothingAccessories = () => {
-        history.push('/post-ad-form/childrens-clothing-accessories')
+        history.push('/post-ad-form/fashion-beauty/childrens-clothing-accessories')
     }
 
     const handleJewellery = () => {
-        history.push('/post-ad-form/jewellery')
+        history.push('/post-ad-form/fashion-beauty/jewellery')
     }
 
     const handleOpticalItems = () => {
-        history.push('/post-ad-form/optical-items')
+        history.push('/post-ad-form/fashion-beauty/optical-items')
     }
 
     const handleWatches = () => {
-        history.push('/post-ad-form/watches')
+        history.push('/post-ad-form/fashion-beauty/watches')
     }
 
     const handleBags = () => {
-        history.push('/post-ad-form/bags')
+        history.push('/post-ad-form/fashion-beauty/bags')
     }
 
     const handleWholesaleBulk = () => {
-        history.push('/post-ad-form/wholesale-bulk')
+        history.push('/post-ad-form/fashion-beauty/wholesale-bulk')
     }
 
     const handleBeautyProducts = () => {
-        history.push('/post-ad-form/beauty-products')
+        history.push('/post-ad-form/fashion-beauty/beauty-products')
     }
 
     const handleOtherItems = () => {
-        history.push('/post-ad-form/other-items')
+        history.push('/post-ad-form/fashion-beauty/other-items')
     }
 
     return (

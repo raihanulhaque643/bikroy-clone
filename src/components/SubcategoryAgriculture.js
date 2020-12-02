@@ -8,15 +8,15 @@ const SubcategoryAgriculture = () => {
     const history = useHistory();
 
     const handleCropsSeedsPlants = () => {
-        history.push('/post-ad-form/crops-seeds-plants')
+        history.push('/post-ad-form/agriculture/crops-seeds-plants')
     }
 
     const handleFarmingToolsMachinery = () => {
-        history.push('/post-ad-form/farming-tools-machinery')
+        history.push('/post-ad-form/agriculture/farming-tools-machinery')
     }
 
     const handleOtherAgriculture = () => {
-        history.push('/post-ad-form/other-agriculture')
+        history.push('/post-ad-form/agriculture/other-agriculture')
     }
 
     return (

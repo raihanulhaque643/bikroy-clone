@@ -8,31 +8,31 @@ const SubcategoryBusinessIndustry = () => {
     const history = useHistory();
 
     const handleOfficeSuppliesStationary = () => {
-        history.push('/post-ad-form/office-supplies-stationary')
+        history.push('/post-ad-form/business-industry/office-supplies-stationary')
     }
 
     const handleSafetySecurity = () => {
-        history.push('/post-ad-form/safety-security')
+        history.push('/post-ad-form/business-industry/safety-security')
     }
 
     const handleIndustryMachineryTools = () => {
-        history.push('/post-ad-form/industry-machinery-tools')
+        history.push('/post-ad-form/business-industry/industry-machinery-tools')
     }
 
     const handleRawMaterialsIndustrialSupplies = () => {
-        history.push('/post-ad-form/raw-materials-industrial-supplies')
+        history.push('/post-ad-form/business-industry/raw-materials-industrial-supplies')
     }
 
     const handleLicensesTitlesTenders = () => {
-        history.push('/post-ad-form/licences-titles-tenders')
+        history.push('/post-ad-form/business-industry/licences-titles-tenders')
     }
 
     const handleMedicalEquipmentSupplies = () => {
-        history.push('/post-ad-form/medical-equipment-supplies')
+        history.push('/post-ad-form/business-industry/medical-equipment-supplies')
     }
 
     const handleOtherBusinessIndustrialItems = () => {
-        history.push('/post-ad-form/other-business-industrial-items')
+        history.push('/post-ad-form/business-industry/other-business-industrial-items')
     }
 
     return (

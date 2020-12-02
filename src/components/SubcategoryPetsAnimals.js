@@ -8,19 +8,19 @@ const SubcategoryPetsAnimals = () => {
     const history = useHistory();
 
     const handlePets = () => {
-        history.push('/post-ad-form/pets')
+        history.push('/post-ad-form/pets-animals/pets')
     }
 
     const handleFarmAnimals = () => {
-        history.push('/post-ad-form/farm-animals')
+        history.push('/post-ad-form/pets-animals/farm-animals')
     }
 
     const handlePetAnimalAccessories = () => {
-        history.push('/post-ad-form/pet-animal-accessories')
+        history.push('/post-ad-form/pets-animals/pet-animal-accessories')
     }
 
     const handleOtherPetsAnimals = () => {
-        history.push('/post-ad-form/other-pets-animals')
+        history.push('/post-ad-form/pets-animals/other-pets-animals')
     }
     
     return (

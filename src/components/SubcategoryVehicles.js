@@ -8,35 +8,35 @@ const SubcategoryVehicles = () => {
     const history = useHistory();
 
     const handleCars = () => {
-        history.push('/post-ad-form/cars')
+        history.push('/post-ad-form/vehicles/cars')
     }
 
     const handleMotorbikesScooters = () => {
-        history.push('/post-ad-form/motorbikes-scooters')
+        history.push('/post-ad-form/vehicles/motorbikes-scooters')
     }
 
     const handleBicyclesThreeWheelers = () => {
-        history.push('/post-ad-form/bicycles-three-wheelers')
+        history.push('/post-ad-form/vehicles/bicycles-three-wheelers')
     }
 
     const handleTrucksVansBuses = () => {
-        history.push('/post-ad-form/trucks-vans-buses')
+        history.push('/post-ad-form/vehicles/trucks-vans-buses')
     }
 
     const handleTractorsHeavyDuty = () => {
-        history.push('/post-ad-form/tractors-heavy-duty')
+        history.push('/post-ad-form/vehicles/tractors-heavy-duty')
     }
 
     const handleAutoPartsAccessories = () => {
-        history.push('/post-ad-form/auto-parts-accessories')
+        history.push('/post-ad-form/vehicles/auto-parts-accessories')
     }
 
     const handleWaterTranport = () => {
-        history.push('/post-ad-form/water-transport')
+        history.push('/post-ad-form/vehicles/water-transport')
     }
 
     const handleCarRentalAutosServices = () => {
-        history.push('/post-ad-form/car-rental-auto-services')
+        history.push('/post-ad-form/vehicles/car-rental-auto-services')
     }
 
     return (
