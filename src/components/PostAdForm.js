@@ -21,7 +21,7 @@ const PostAdForm = () => {
             </div>
          </div>
             <Formik
-       initialValues={{ subcategory: subcategory, title: '', description: '', price: '', negotiable: null, contact: '' }}
+       initialValues={{ subcategory: subcategory, title: '', description: '', price: '', negotiable: null, photo: null, contact: '' }}
        validate={values => {
          const errors = {};
          if (!values.title) {
@@ -35,6 +35,9 @@ const PostAdForm = () => {
          }
          if (!values.contact) {
            errors.contact = '** Contact field can not be empty! **';
+         }
+         if (!values.photo) {
+           errors.photo = '** Attach a photo! **';
          }
 
          return errors;
