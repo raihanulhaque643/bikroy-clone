@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+.postAdFormContainer {
+    width: 100%;
+    min-height: auto;
+    max-height: auto;
+    background: #e7edee;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: visible;
+    border-bottom: 1.5px solid green;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+.postAdFormBody {
+    width: 100%;
+    height: auto;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: Arial,Helvetica,sans-serif;
+    width: 984px;
+    overflow: visible;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+}
+
+.postAdFormHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+.postAdHeaderLeft, .postAdHeaderRight {
+    width: 100%;
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+}
+
+.postAdHeaderRight {
+    text-align: right;
+}
+
+.postAdForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    height: auto;
+}
+
+.formFieldGroup {
+    width: 492px;
+    margin: 10px 0px
+}
+
+.formFieldGroup > input {
+    width: 100%;
+}
+
+.textAreaField {
+    width: 100%;
+    min-height: 150px;
+}
+
+.negotiableGroup {
+    display: flex;
+}
+
+.title, .description, .price, .photo, .phoneNumber {
+    margin-bottom: 4px;
+    color: gray;
+    font-size: 12px;
+}
+
+.negotiable {
+    font-size: 14px;
+    color: gray;
+}
+
+.field {
+    padding: 8px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.postAdButtonContainer {
+    width: 492px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.postAdButton {
+    width: 170px;
+    padding: 10px;
+    background-color: #5bb8a4;
+    border-radius: 4px;
+    color: white;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    margin: 15px 0px;
+}
+
+.postAdButton:hover {
+    cursor: pointer;
+    background-color: #53ad9a;
+}
+
+.postAdButton:active {
+    background-color: #438b7c;
+}
+
+.borderRed {
+    border: 1px solid red;
+}
