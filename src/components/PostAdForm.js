@@ -1,10 +1,14 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import './PostAdForm.css';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form, Field, ErrorMessage, setFieldValue } from 'formik';
+import {uploadImageAsync} from '../features/ads/adsSlice.js';
 
 
 const PostAdForm = () => {
+
+    const dispatch = useDispatch();
 
     let {subcategory} = useParams();
     let {category} = useParams();
@@ -21,7 +25,7 @@ const PostAdForm = () => {
             </div>
          </div>
             <Formik
-       initialValues={{ category: category, subcategory: subcategory, title: '', description: '', price: '', negotiable: null, photo: null, contact: '' }}
+       initialValues={{ category: category, subcategory: subcategory, title: '', description: '', price: '', negotiable: '', photo: '', contact: '' }}
        validate={values => {
          const errors = {};
          if (!values.title) {
@@ -36,20 +40,14 @@ const PostAdForm = () => {
          if (!values.contact) {
            errors.contact = '** Contact field can not be empty! **';
          }
-         if (!values.photo) {
-           errors.photo = '** Attach a photo! **';
-         }
 
          return errors;
        }}
        onSubmit={(values, { setSubmitting }) => {
-         setTimeout(() => {
-           alert(JSON.stringify(values, null, 6));
-           setSubmitting(false);
-         }, 400);
+         dispatch(uploadImageAsync(values.photo));
        }}
      >
-       {({ isSubmitting }) => (
+       {({ isSubmitting, setFieldValue }) => (
          <Form className="postAdForm">
 
             <div className="formFieldGroup">
@@ -80,7 +78,12 @@ const PostAdForm = () => {
 
            <div className="formFieldGroup">
            <div className="photo">Add photo</div>
-           <Field className="field" type="file" name="photo" />
+           <input className="field" type="file" name="photo" 
+           accept="image/x-png,image/gif,image/jpeg"
+           onChange={(event) => {
+             setFieldValue('photo', event.currentTarget.files[0]);
+           }}
+            />
            <ErrorMessage style={{color: 'red', fontSize: '12px'}} name="photo" component="div" />
            </div>
 

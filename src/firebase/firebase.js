@@ -1,6 +1,7 @@
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
+import "firebase/storage";
 
 const firebaseConfig = {
     apiKey: "AIzaSyAniBvo14s1mOEIRi4nHUWi5VtPM61a9uI",
@@ -10,7 +11,8 @@ const firebaseConfig = {
     storageBucket: "bikroy-clone.appspot.com",
     messagingSenderId: "658514105557",
     appId: "1:658514105557:web:736a2649a23ded5281be5c",
-    measurementId: "G-ZVHVTPCYQM"
+    measurementId: "G-ZVHVTPCYQM",
+    storageBucket: 'gs://bikroy-clone.appspot.com'
   };
   
   // Initialize Firebase
@@ -71,3 +73,8 @@ export const signUpWithEmailAndPassword = (email, password) => { firebase.auth()
     // ..
   });
 }
+
+
+var storage = firebase.storage();
+// Create a storage reference from our storage service
+export var storageRef = storage.ref();
