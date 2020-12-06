@@ -44,7 +44,7 @@ const PostAdForm = () => {
          return errors;
        }}
        onSubmit={(values, { setSubmitting }) => {
-         dispatch(uploadImageAsync(values.photo));
+         dispatch(uploadImageAsync(values));
        }}
      >
        {({ isSubmitting, setFieldValue }) => (
