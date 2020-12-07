@@ -24,6 +24,23 @@ export const adsSlice = createSlice({
 export const { increment, decrement, incrementByAmount } = adsSlice.actions;
 
 export const uploadImageAsync = values => dispatch => {
+
+    let today = new Date();
+
+    let dateCreated = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+    const formatAMPM = (date) => {
+      let hours = date.getHours();
+      let minutes = date.getMinutes();
+      var ampm = hours >= 12 ? 'pm' : 'am';
+      hours = hours % 12;
+      hours = hours ? hours : 12; // the hour '0' should be '12'
+      minutes = minutes < 10 ? '0'+minutes : minutes;
+      let strTime = hours + ':' + minutes + ' ' + ampm;
+      return strTime;
+    }
+    let timeCreated = formatAMPM(today);
+    let timestamp = today;
+
     const file = values.photo;
     const uniqueFilename = uuidv4();
     var uploadTask  = storageRef.child(uniqueFilename).put(file);
@@ -70,8 +87,24 @@ export const uploadImageAsync = values => dispatch => {
     // Upload completed successfully, now we can get the download URL
     uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
       console.log('Upload successful!')
-      console.log('File available at', downloadURL);
-      console.log(values);
+
+      let adDetails = {
+        category: values.category,
+        subcategory: values.subcategory,
+        title: values.title,
+        description: values.description,
+        negotiable: values.negotiable,
+        contact: values.contact,
+        uniqueImageId: uniqueFilename,
+        imageDownloadUrl: downloadURL,
+        adOwner: localStorage.getItem('email'),
+        dateCreated,
+        timeCreated,
+        timestamp
+      }
+
+      console.log(adDetails);
+
     });
     });
 
