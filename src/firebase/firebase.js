@@ -75,6 +75,6 @@ export const signUpWithEmailAndPassword = (email, password) => { firebase.auth()
 }
 
 
-var storage = firebase.storage();
+export var storage = firebase.storage();
 // Create a storage reference from our storage service
 export var storageRef = storage.ref();
