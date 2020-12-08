@@ -17,6 +17,7 @@ import Footer from './components/Footer';
 import Authentication from './components/Authentication';
 import PostAd from './components/PostAd';
 import PostAdForm from './components/PostAdForm';
+import AllAds from './components/AllAds';
 
 function App() {
   return (
@@ -49,6 +50,10 @@ function App() {
         <PostAdForm /> :
         <Redirect to="/" />
       }
+      </Route>
+
+      <Route path="/all-ads">
+        <AllAds /> 
       </Route>
 
       <Route path="/">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import './PostAdForm.css';
 import { Formik, Form, Field, ErrorMessage, setFieldValue } from 'formik';
@@ -9,6 +9,7 @@ import {uploadImageAsync} from '../features/ads/adsSlice.js';
 const PostAdForm = () => {
 
     const dispatch = useDispatch();
+    const history = useHistory();
 
     let {subcategory} = useParams();
     let {category} = useParams();
@@ -48,6 +49,7 @@ const PostAdForm = () => {
        }}
        onSubmit={(values, { setSubmitting }) => {
          dispatch(uploadImageAsync(values));
+         history.push('/all-ads');
        }}
      >
        {({ isSubmitting, setFieldValue }) => (
