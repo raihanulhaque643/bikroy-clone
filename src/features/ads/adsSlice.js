@@ -109,7 +109,7 @@ export const uploadImageAsync = values => dispatch => {
 export const adsSlice = createSlice({
   name: 'ads',
   initialState: {
-    value: 0,
+    value: [],
   },
   reducers: {
     increment: state => {

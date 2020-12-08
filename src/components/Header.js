@@ -48,8 +48,10 @@ const Header = () => {
         <div className="headerContainer">
             <div className="header">
             <div className="headerLeft">
-                <div className="logo" onClick={()=>{history.push('/home')}}>Bikryo.com</div>
-                <div className="allAdsLink">All ads</div>
+                <div className="logo" 
+                onClick={()=>{history.push('/home')}}>Bikryo.com</div>
+                <div className="allAdsLink" 
+                onClick={()=>{history.push('/all-ads')}}>All ads</div>
             </div>
             <div className="headerRight">
                 {content}
