@@ -39,7 +39,6 @@
     display: flex;
     justify-content: flex-end;
     margin: 0px;
-    margin-bottom: 15px;
     padding: 15px;
     border-bottom: 1px solid lightgray;
 }
@@ -56,4 +55,24 @@
     color: white;
     font-size: 16px;
     font-weight: bold;
+}
+
+.allAdsBodyColumns {
+    margin-top: 0px;
+    display: flex;
+    width: 100%;
+}
+
+.allAdsBodyLeft, .allAdsBodyRight {
+    padding: 10px;
+    /* border: 1px solid red; */
+    height: auto;
+}
+
+.allAdsBodyLeft {
+    width: 30%;
+    border-right: 1px solid lightgray;
+}
+.allAdsBodyRight {
+    width: 70%;
 }

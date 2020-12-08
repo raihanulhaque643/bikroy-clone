@@ -3,12 +3,14 @@
 }
 
 .modalColumn > button {
+    color: #0074ba;
     width: 100%;
     height: 35px;
     background: white;
     cursor: pointer;
     margin-bottom: 2px;
     padding-bottom: 35px;
+    border: none;
     outline: none;
 }
 
