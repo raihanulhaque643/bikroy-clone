@@ -100,7 +100,8 @@ export const uploadImageAsync = values => dispatch => {
         adOwner: localStorage.getItem('email'),
         dateCreated,
         timeCreated,
-        timestamp
+        timestamp,
+        city: values.city
       }
 
       console.log(adDetails);

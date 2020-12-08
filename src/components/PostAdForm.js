@@ -25,7 +25,7 @@ const PostAdForm = () => {
             </div>
          </div>
             <Formik
-       initialValues={{ category: category, subcategory: subcategory, title: '', description: '', price: '', negotiable: '', photo: '', contact: '' }}
+       initialValues={{ category: category, subcategory: subcategory, title: '', description: '', price: '', negotiable: '', photo: '', contact: '', city: 'Dhaka' }}
        validate={values => {
          const errors = {};
          if (!values.title) {
@@ -40,6 +40,9 @@ const PostAdForm = () => {
          if (!values.contact) {
            errors.contact = '** Contact field can not be empty! **';
          }
+         if (!values.city) {
+           errors.city = '** City field can not be empty! **';
+         }
 
          return errors;
        }}
@@ -49,6 +52,21 @@ const PostAdForm = () => {
      >
        {({ isSubmitting, setFieldValue }) => (
          <Form className="postAdForm">
+
+            <div className="formFieldGroup">
+           <div className="title">City</div>
+           <Field className="field" as="select" name="city" style={{width: '100%'}}>
+              <option value="dhaka">Dhaka</option>
+              <option value="chattogram">Chattogram</option>
+              <option value="sylhet">Sylhet</option>
+              <option value="khulna">Khulna</option>
+              <option value="barishal">Barishal</option>
+              <option value="rajshahi">Rajshahi</option>
+              <option value="rangpur">Rangpur</option>
+              <option value="mymensignh">Mymensingh</option>
+           </Field>
+           <ErrorMessage style={{color: 'red', fontSize: '12px'}} name="city" component="div" />
+           </div>
 
             <div className="formFieldGroup">
            <div className="title">Title</div>
