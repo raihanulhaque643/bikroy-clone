@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchAllAds, selectAds } from '../features/ads/adsSlice.js';
+import AdInfo from './AdInfo.js';
 import './AllAds.css';
 import CustomCatButtonWithImg from './CustomCatButtonWithImg';
 import './CustomCatButtonWithImg.css';
 
 const AllAds = () => {
+
+    const ads = useSelector(selectAds);
+
+    const dispatch = useDispatch();
+
+    const adsStatus = useSelector(state => state.ads.status);
+
+    useEffect(() => {
+        if (adsStatus === 'idle') {
+          dispatch(fetchAllAds());
+        }
+      }, [adsStatus, dispatch]);
 
     const handleEssentialsButton = () => {
         
@@ -55,6 +70,23 @@ const AllAds = () => {
     
       const handleAgricultureButton = () => {
         
+      }
+
+      let content;
+
+      if(adsStatus === 'loading') {
+        content = <div>Loading... Please wait...</div>
+      } else if (adsStatus === 'succeeded') {
+          content = 
+          <div>
+          {
+                ads.map((ad) => {
+                    return (
+                        <AdInfo info={ad} />
+                    )
+                })
+          }
+          </div>
       }
 
     return (
@@ -151,7 +183,7 @@ const AllAds = () => {
                         </div>
                     </div>
                     <div className="allAdsBodyRight">
-                        right 
+                        {content}
                     </div>
                 </div>
             </div>

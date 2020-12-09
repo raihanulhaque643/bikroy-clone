@@ -2,12 +2,26 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import {storageRef, db} from '../../firebase/firebase.js';
 import firebase from "firebase/app";
 import { v4 as uuidv4 } from 'uuid';
+import { useEffect } from 'react';
+
+export const fetchAllAds = createAsyncThunk('ads/fetchAllAds', async () => {
+  const ref = db.collection("ads").orderBy("timestamp", "desc");
+  const response = await ref.get().then((querySnapshot) => {
+    let adsArray =[];
+    querySnapshot.forEach(doc => {
+      adsArray.push(doc.data());
+    })
+    console.log(adsArray);
+    return adsArray;
+  })
+  return response;
+})
 
 export const createAdAsync = createAsyncThunk('ads/createAd', async (adDetails) => {
   const uniqueAdId = uuidv4();
-  const { category, subcategory,title,description,negotiable,contact,uniqueImageId,imageDownloadUrl,adOwner, timestamp, dateCreated, timeCreated, city } = adDetails;
+  const { category, subcategory,title,description,negotiable,contact,uniqueImageId,imageDownloadUrl,adOwner, timestamp, dateCreated, timeCreated, city, price } = adDetails;
   db.collection("ads").doc(uniqueAdId).set({
-    uniqueAdId,category, subcategory,title,description,negotiable,contact,uniqueImageId,imageDownloadUrl,adOwner, timestamp, dateCreated, timeCreated, city
+    uniqueAdId,category, subcategory,title,description,negotiable,contact,uniqueImageId,imageDownloadUrl,adOwner, timestamp, dateCreated, timeCreated, city, price
   })
   .then(() => {
     console.log('Document successfully written to firestore');
@@ -95,7 +109,8 @@ export const uploadImageAsync = values => dispatch => {
       dateCreated,
       timeCreated,
       timestamp,
-      city: values.city
+      city: values.city,
+      price: values.price
     }
 
     // console.log(adDetails);
@@ -106,11 +121,15 @@ export const uploadImageAsync = values => dispatch => {
 
 };
 
+const initialState = {
+  ads: [],
+  status: 'idle',
+  error: null
+}
+
 export const adsSlice = createSlice({
   name: 'ads',
-  initialState: {
-    value: [],
-  },
+  initialState,
   reducers: {
     increment: state => {
       state.value += 1;
@@ -123,6 +142,18 @@ export const adsSlice = createSlice({
     },
   },
   extraReducers: {
+    [fetchAllAds.pending]: (state, action) => {
+      state.status = 'loading'
+    },
+    [fetchAllAds.fulfilled]: (state, action) => {
+      state.status = 'succeeded'
+      state.ads = [];
+      state.ads = state.ads.concat(action.payload);
+    },
+    [fetchAllAds.rejected]: (state, action) => {
+      state.status = 'failed'
+      state.error = action.error.message
+    },
     [createAdAsync.pending]: (state, action) => {
       state.status = 'loading'
     },
@@ -135,8 +166,8 @@ export const adsSlice = createSlice({
   }
 });
 
-export const { increment, decrement, incrementByAmount } = adsSlice.actions;
+// export const { increment, decrement, incrementByAmount } = adsSlice.actions;
 
-export const selectAds = state => state.ads.value;
+export const selectAds = state => state.ads.ads;
 
 export default adsSlice.reducer;
