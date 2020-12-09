@@ -14,6 +14,19 @@ const AllAds = () => {
 
     const adsStatus = useSelector(state => state.ads.status);
 
+    const [searchTerm, setSearchTerm] = useState("");
+    const [searchResults, setSearchResults] = useState([]);
+
+    const handleSearchInput = event => {
+        setSearchTerm(event.target.value);
+    };
+
+    const results = !searchTerm
+    ? ads
+    : ads.filter(ad =>
+        ad.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+      );
+
     useEffect(() => {
         if (adsStatus === 'idle') {
           dispatch(fetchAllAds());
@@ -80,7 +93,7 @@ const AllAds = () => {
           content = 
           <div>
           {
-                ads.map((ad) => {
+                results.map((ad) => {
                     return (
                         <AdInfo info={ad} />
                     )
@@ -93,7 +106,13 @@ const AllAds = () => {
         <div className="allAdsContainer">
             <div className="allAdsBody">
                 <div className="allAdsHeader">
-                <input className="searchAdBox" type="text" placeholder="What are you looking for?" />
+                <input 
+                className="searchAdBox" 
+                type="text" 
+                placeholder="What are you looking for?"
+                value={searchTerm}
+                onChange={handleSearchInput}
+                 />
                 <button className="searchAdsButton">Search</button>
                 </div>
                 <div className="allAdsBodyColumns">
