@@ -1,4 +1,5 @@
 import React from 'react';
+import NumberFormat from 'react-number-format';
 import './AdInfo.css';
 
 const AdInfo = (props) => {
@@ -13,11 +14,17 @@ const AdInfo = (props) => {
                 </div>
             </div>
             <div className="adInfoContainerDetails">
-                <div className="">{ad.title}</div>
-                <div className="">{ad.city}, {ad.category}</div>
-                <div className="">{ad.price}</div>
-                <div className="">{ad.contact}</div>
-                <div className="">{ad.dateCreated} {ad.timeCreated}</div>
+                <div className="adInfoTitle">{ad.title}</div>
+                <div className="adInfoCity">{ad.city}, {ad.category}</div>
+                <div className="adInfoPrice">
+                    <NumberFormat 
+                    value={ad.price} 
+                    displayType={'text'} 
+                    thousandSeparator={true} 
+                    thousandsGroupStyle="lakh" 
+                    prefix={'Tk. '} />
+                </div>
+                <div className="adInfoDateTime">{ad.dateCreated} {ad.timeCreated}</div>
             </div>
         </div>
     )

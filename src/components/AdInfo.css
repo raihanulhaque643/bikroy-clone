@@ -33,3 +33,24 @@
     justify-content: center;
     align-items: flex-start;
 }    
+
+.adInfoTitle, .adInfoCity, .adInfoPrice, .adInfoDateTime {
+    margin-bottom: 6px;
+}
+
+.adInfoTitle {
+    font-weight: bold;
+}
+
+.adInfoCity {
+    color: gray;
+}
+
+.adInfoPrice {
+    font-weight: bold;
+    color: darkgreen;
+}
+
+.adInfoDateTime {
+    
+}
