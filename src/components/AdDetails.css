@@ -46,6 +46,7 @@
 
 .adDetailsHeaderSubtitle {
     color: gray;
+    margin-bottom: 10px;
 }
 
 .adDetailsBodyContent {
@@ -65,6 +66,9 @@
     height: auto;
     width: auto;
     background: #e7edee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .adDetailsBodyContentLeftImageContainer > img {
