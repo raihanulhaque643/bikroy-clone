@@ -1,6 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchAllAds, selectAds } from '../features/ads/adsSlice.js';
+import { 
+    fetchAgricultureAds, 
+    fetchAllAds, 
+    fetchBusinessIndustryAds, 
+    fetchEducationAds, 
+    fetchElectronicssAds, 
+    fetchEssentialssAds, 
+    fetchFashionBeautyAds, 
+    fetchHobbiesSportsKidsAds, 
+    fetchHomeLivingAds, 
+    fetchMobilesAds, 
+    fetchPetsAnimalsAds, 
+    fetchPropertyAds, 
+    fetchServicesAds, 
+    fetchVehiclesAds, 
+    selectAds 
+} from '../features/ads/adsSlice.js';
 import AdInfo from './AdInfo.js';
 import './AllAds.css';
 import CustomCatButtonWithImg from './CustomCatButtonWithImg';
@@ -34,55 +50,55 @@ const AllAds = () => {
       }, [adsStatus, dispatch]);
 
     const handleEssentialsButton = () => {
-        
+        dispatch(fetchEssentialssAds());
       }
     
       const handleMobilesButton = () => {
-        
+        dispatch(fetchMobilesAds());
       }
     
       const handleElectronicsButton = () => {
-        
+        dispatch(fetchElectronicssAds());
       }
     
       const handleVehiclesButton = () => {
-        
+        dispatch(fetchVehiclesAds());
       }
     
       const handlePropertyButton = () => {
-        
+        dispatch(fetchPropertyAds());
       }
     
       const handleServicesButton = () => {
-        
+        dispatch(fetchServicesAds());
       }
     
       const handleHomeLivingButton = () => {
-        
+        dispatch(fetchHomeLivingAds());
       }
     
       const handleFashionBeautyButton = () => {
-        
+        dispatch(fetchFashionBeautyAds());
       }
     
       const handleHobbiesSportsKidsButton = () => {
-        
+        dispatch(fetchHobbiesSportsKidsAds());
       }
     
       const handleBusinessIndustryButton = () => {
-        
+        dispatch(fetchBusinessIndustryAds());
       }
     
       const handleEducationButton = () => {
-        
+        dispatch(fetchEducationAds());
       }
     
       const handlePetsAnimalsButton = () => {
-        
+        dispatch(fetchPetsAnimalsAds());
       }
     
       const handleAgricultureButton = () => {
-        
+        dispatch(fetchAgricultureAds());
       }
 
       let content;

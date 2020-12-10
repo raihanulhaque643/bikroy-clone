@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import '../components/Header.css'
 
 import { useHistory } from "react-router-dom";
 import { useEffect } from 'react';
 import { logOut } from '../firebase/firebase';
+import { fetchAllAds } from '../features/ads/adsSlice';
 
 const Header = () => {
     const history = useHistory();
+
+    const dispatch = useDispatch();
 
     const [content, setContent] = useState(
         <div className="loginButton" onClick={()=>{history.push('/auth')}}>
@@ -44,6 +48,11 @@ const Header = () => {
         }
     }
 
+    const handleAllAdsButton = () => {
+        dispatch(fetchAllAds());
+        history.push('/all-ads');
+    }
+
     return (
         <div className="headerContainer">
             <div className="header">
@@ -51,7 +60,11 @@ const Header = () => {
                 <div className="logo" 
                 onClick={()=>{history.push('/home')}}>Bikryo.com</div>
                 <div className="allAdsLink" 
-                onClick={()=>{history.push('/all-ads')}}>All ads</div>
+                onClick={
+                    ()=>{
+                        handleAllAdsButton()
+                        }
+                    }>All ads</div>
             </div>
             <div className="headerRight">
                 {content}

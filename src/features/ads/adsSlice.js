@@ -17,6 +17,175 @@ export const fetchAllAds = createAsyncThunk('ads/fetchAllAds', async () => {
   return response;
 })
 
+export const fetchMobilesAds = createAsyncThunk('ads/fetchMobilesAds', async () => {
+  const ref = db.collection("ads").where("category", "==", "mobiles" );
+  const response = await ref.get().then((querySnapshot) => {
+    let adsArray =[];
+    querySnapshot.forEach(doc => {
+      adsArray.push(doc.data());
+    })
+    console.log(adsArray);
+    return adsArray;
+  })
+  return response;
+})
+
+export const fetchEssentialssAds = createAsyncThunk('ads/fetchEssentialssAds', async () => {
+  const ref = db.collection("ads").where("category", "==", "essentials" );
+  const response = await ref.get().then((querySnapshot) => {
+    let adsArray =[];
+    querySnapshot.forEach(doc => {
+      adsArray.push(doc.data());
+    })
+    console.log(adsArray);
+    return adsArray;
+  })
+  return response;
+})
+
+export const fetchElectronicssAds = createAsyncThunk('ads/fetchElectronicssAds', async () => {
+  const ref = db.collection("ads").where("category", "==", "electronics" );
+  const response = await ref.get().then((querySnapshot) => {
+    let adsArray =[];
+    querySnapshot.forEach(doc => {
+      adsArray.push(doc.data());
+    })
+    console.log(adsArray);
+    return adsArray;
+  })
+  return response;
+})
+
+export const fetchVehiclesAds = createAsyncThunk('ads/fetchVehiclesAds', async () => {
+  const ref = db.collection("ads").where("category", "==", "vehicles" );
+  const response = await ref.get().then((querySnapshot) => {
+    let adsArray =[];
+    querySnapshot.forEach(doc => {
+      adsArray.push(doc.data());
+    })
+    console.log(adsArray);
+    return adsArray;
+  })
+  return response;
+})
+
+export const fetchPropertyAds = createAsyncThunk('ads/fetchPropertyAds', async () => {
+  const ref = db.collection("ads").where("category", "==", "proptery" );
+  const response = await ref.get().then((querySnapshot) => {
+    let adsArray =[];
+    querySnapshot.forEach(doc => {
+      adsArray.push(doc.data());
+    })
+    console.log(adsArray);
+    return adsArray;
+  })
+  return response;
+})
+
+export const fetchServicesAds = createAsyncThunk('ads/fetchServicesAds', async () => {
+  const ref = db.collection("ads").where("category", "==", "services" );
+  const response = await ref.get().then((querySnapshot) => {
+    let adsArray =[];
+    querySnapshot.forEach(doc => {
+      adsArray.push(doc.data());
+    })
+    console.log(adsArray);
+    return adsArray;
+  })
+  return response;
+})
+
+export const fetchHomeLivingAds = createAsyncThunk('ads/fetchHomeLivingAds', async () => {
+  const ref = db.collection("ads").where("category", "==", "home-living" );
+  const response = await ref.get().then((querySnapshot) => {
+    let adsArray =[];
+    querySnapshot.forEach(doc => {
+      adsArray.push(doc.data());
+    })
+    console.log(adsArray);
+    return adsArray;
+  })
+  return response;
+})
+
+export const fetchFashionBeautyAds = createAsyncThunk('ads/fetchFashionBeautyAds', async () => {
+  const ref = db.collection("ads").where("category", "==", "fashion-beauty" );
+  const response = await ref.get().then((querySnapshot) => {
+    let adsArray =[];
+    querySnapshot.forEach(doc => {
+      adsArray.push(doc.data());
+    })
+    console.log(adsArray);
+    return adsArray;
+  })
+  return response;
+})
+
+export const fetchHobbiesSportsKidsAds = createAsyncThunk('ads/fetchHobbiesSportsKidsAds', async () => {
+  const ref = db.collection("ads").where("category", "==", "hobbies-sports-kids" );
+  const response = await ref.get().then((querySnapshot) => {
+    let adsArray =[];
+    querySnapshot.forEach(doc => {
+      adsArray.push(doc.data());
+    })
+    console.log(adsArray);
+    return adsArray;
+  })
+  return response;
+})
+
+export const fetchBusinessIndustryAds = createAsyncThunk('ads/fetchBusinessIndustryAds', async () => {
+  const ref = db.collection("ads").where("category", "==", "business-industry" );
+  const response = await ref.get().then((querySnapshot) => {
+    let adsArray =[];
+    querySnapshot.forEach(doc => {
+      adsArray.push(doc.data());
+    })
+    console.log(adsArray);
+    return adsArray;
+  })
+  return response;
+})
+
+export const fetchEducationAds = createAsyncThunk('ads/fetchEducationAds', async () => {
+  const ref = db.collection("ads").where("category", "==", "education" );
+  const response = await ref.get().then((querySnapshot) => {
+    let adsArray =[];
+    querySnapshot.forEach(doc => {
+      adsArray.push(doc.data());
+    })
+    console.log(adsArray);
+    return adsArray;
+  })
+  return response;
+})
+
+export const fetchPetsAnimalsAds = createAsyncThunk('ads/fetchPetsAnimalsAds', async () => {
+  const ref = db.collection("ads").where("category", "==", "pets-animals" );
+  const response = await ref.get().then((querySnapshot) => {
+    let adsArray =[];
+    querySnapshot.forEach(doc => {
+      adsArray.push(doc.data());
+    })
+    console.log(adsArray);
+    return adsArray;
+  })
+  return response;
+})
+
+export const fetchAgricultureAds = createAsyncThunk('ads/fetchAgricultureAds', async () => {
+  const ref = db.collection("ads").where("category", "==", "agriculture" );
+  const response = await ref.get().then((querySnapshot) => {
+    let adsArray =[];
+    querySnapshot.forEach(doc => {
+      adsArray.push(doc.data());
+    })
+    console.log(adsArray);
+    return adsArray;
+  })
+  return response;
+})
+
 export const createAdAsync = createAsyncThunk('ads/createAd', async (adDetails) => {
   const uniqueAdId = uuidv4();
   const { category, subcategory,title,description,negotiable,contact,uniqueImageId,imageDownloadUrl,adOwner, timestamp, dateCreated, timeCreated, city, price } = adDetails;
@@ -154,6 +323,176 @@ export const adsSlice = createSlice({
       state.status = 'failed'
       state.error = action.error.message
     },
+
+    [fetchMobilesAds.pending]: (state, action) => {
+      // state.status = 'loading'
+    },
+    [fetchMobilesAds.fulfilled]: (state, action) => {
+      // state.status = 'succeeded'
+      state.ads = [];
+      state.ads = state.ads.concat(action.payload);
+    },
+    [fetchMobilesAds.rejected]: (state, action) => {
+      // state.status = 'failed'
+      state.error = action.error.message
+    },
+
+    [fetchEssentialssAds.pending]: (state, action) => {
+      // state.status = 'loading'
+    },
+    [fetchEssentialssAds.fulfilled]: (state, action) => {
+      // state.status = 'succeeded'
+      state.ads = [];
+      state.ads = state.ads.concat(action.payload);
+    },
+    [fetchEssentialssAds.rejected]: (state, action) => {
+      // state.status = 'failed'
+      state.error = action.error.message
+    },
+
+    [fetchElectronicssAds.pending]: (state, action) => {
+      // state.status = 'loading'
+    },
+    [fetchElectronicssAds.fulfilled]: (state, action) => {
+      // state.status = 'succeeded'
+      state.ads = [];
+      state.ads = state.ads.concat(action.payload);
+    },
+    [fetchElectronicssAds.rejected]: (state, action) => {
+      // state.status = 'failed'
+      state.error = action.error.message
+    },
+
+    [fetchVehiclesAds.pending]: (state, action) => {
+      // state.status = 'loading'
+    },
+    [fetchVehiclesAds.fulfilled]: (state, action) => {
+      // state.status = 'succeeded'
+      state.ads = [];
+      state.ads = state.ads.concat(action.payload);
+    },
+    [fetchVehiclesAds.rejected]: (state, action) => {
+      // state.status = 'failed'
+      state.error = action.error.message
+    },
+
+    [fetchPropertyAds.pending]: (state, action) => {
+      // state.status = 'loading'
+    },
+    [fetchPropertyAds.fulfilled]: (state, action) => {
+      // state.status = 'succeeded'
+      state.ads = [];
+      state.ads = state.ads.concat(action.payload);
+    },
+    [fetchPropertyAds.rejected]: (state, action) => {
+      // state.status = 'failed'
+      state.error = action.error.message
+    },
+
+    [fetchServicesAds.pending]: (state, action) => {
+      // state.status = 'loading'
+    },
+    [fetchServicesAds.fulfilled]: (state, action) => {
+      // state.status = 'succeeded'
+      state.ads = [];
+      state.ads = state.ads.concat(action.payload);
+    },
+    [fetchServicesAds.rejected]: (state, action) => {
+      // state.status = 'failed'
+      state.error = action.error.message
+    },
+
+    [fetchHomeLivingAds.pending]: (state, action) => {
+      // state.status = 'loading'
+    },
+    [fetchHomeLivingAds.fulfilled]: (state, action) => {
+      // state.status = 'succeeded'
+      state.ads = [];
+      state.ads = state.ads.concat(action.payload);
+    },
+    [fetchHomeLivingAds.rejected]: (state, action) => {
+      // state.status = 'failed'
+      state.error = action.error.message
+    },
+
+    [fetchFashionBeautyAds.pending]: (state, action) => {
+      // state.status = 'loading'
+    },
+    [fetchFashionBeautyAds.fulfilled]: (state, action) => {
+      // state.status = 'succeeded'
+      state.ads = [];
+      state.ads = state.ads.concat(action.payload);
+    },
+    [fetchFashionBeautyAds.rejected]: (state, action) => {
+      // state.status = 'failed'
+      state.error = action.error.message
+    },
+
+    [fetchHobbiesSportsKidsAds.pending]: (state, action) => {
+      // state.status = 'loading'
+    },
+    [fetchHobbiesSportsKidsAds.fulfilled]: (state, action) => {
+      // state.status = 'succeeded'
+      state.ads = [];
+      state.ads = state.ads.concat(action.payload);
+    },
+    [fetchHobbiesSportsKidsAds.rejected]: (state, action) => {
+      // state.status = 'failed'
+      state.error = action.error.message
+    },
+
+    [fetchBusinessIndustryAds.pending]: (state, action) => {
+      // state.status = 'loading'
+    },
+    [fetchBusinessIndustryAds.fulfilled]: (state, action) => {
+      // state.status = 'succeeded'
+      state.ads = [];
+      state.ads = state.ads.concat(action.payload);
+    },
+    [fetchBusinessIndustryAds.rejected]: (state, action) => {
+      // state.status = 'failed'
+      state.error = action.error.message
+    },
+
+    [fetchEducationAds.pending]: (state, action) => {
+      // state.status = 'loading'
+    },
+    [fetchEducationAds.fulfilled]: (state, action) => {
+      // state.status = 'succeeded'
+      state.ads = [];
+      state.ads = state.ads.concat(action.payload);
+    },
+    [fetchEducationAds.rejected]: (state, action) => {
+      // state.status = 'failed'
+      state.error = action.error.message
+    },
+
+    [fetchPetsAnimalsAds.pending]: (state, action) => {
+      // state.status = 'loading'
+    },
+    [fetchPetsAnimalsAds.fulfilled]: (state, action) => {
+      // state.status = 'succeeded'
+      state.ads = [];
+      state.ads = state.ads.concat(action.payload);
+    },
+    [fetchPetsAnimalsAds.rejected]: (state, action) => {
+      // state.status = 'failed'
+      state.error = action.error.message
+    },
+
+    [fetchAgricultureAds.pending]: (state, action) => {
+      // state.status = 'loading'
+    },
+    [fetchAgricultureAds.fulfilled]: (state, action) => {
+      // state.status = 'succeeded'
+      state.ads = [];
+      state.ads = state.ads.concat(action.payload);
+    },
+    [fetchAgricultureAds.rejected]: (state, action) => {
+      // state.status = 'failed'
+      state.error = action.error.message
+    },
+
     [createAdAsync.pending]: (state, action) => {
       state.status = 'loading'
     },
