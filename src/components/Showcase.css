@@ -63,12 +63,20 @@
     justify-content: center;
 }
 
-.categoryColumn a {
+.categoryColumn button {
     text-decoration: none;
     color: #0074ba;
+    display: flex;
+    flex-direction: column;
+    outline: none;
+    border: none;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
 }
 
-.categoryColumn > a:hover , img:hover {
+.categoryColumn > button:hover {
+    background-color: rgb(243, 242, 242);
     text-decoration: none;
     color: #00547e;
     cursor: pointer;

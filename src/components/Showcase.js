@@ -1,7 +1,39 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 import './Showcase.css';
+import { fetchAllAds, fetchMobilesAds, fetchPropertyAds, fetchVehiclesAds } from '../features/ads/adsSlice';
 
 const Showcase = () => {
+
+    const dispatch = useDispatch();
+
+    const history = useHistory();
+
+    const handlePropertyButton = () => {
+        dispatch(fetchPropertyAds());
+        history.push('/all-ads');
+        window.scrollTo(0, 0);
+      }
+    
+      const handleVehiclesButton = () => {
+        dispatch(fetchVehiclesAds());
+        history.push('/all-ads');
+        window.scrollTo(0, 0);
+      }
+
+      const handleMobilesButton = () => {
+        dispatch(fetchMobilesAds());
+        history.push('/all-ads');
+        window.scrollTo(0, 0);
+      }
+
+      const handleJobsButton = () => {
+        dispatch(fetchAllAds());
+        history.push('/all-ads');
+        window.scrollTo(0, 0);
+      }
+
     return (
         <div className="showcaseContainer">
             <div className="showcase">
@@ -14,10 +46,10 @@ const Showcase = () => {
                     <h4>Browse our top categories:</h4>
                     <div className="showcaseCategories">
                         <div className="showcaseCategoriesRowOne">
-                            <div className="categoryColumn"><img src="Mobiles.png" alt=""/><a href="#">Phones</a></div>
-                            <div className="categoryColumn"><img src="property.png" alt=""/><a href="#">Property</a></div>
-                            <div className="categoryColumn"><img src="vehicles.png" alt=""/><a href="#">Vehicles</a></div>
-                            <div className="categoryColumn"><img src="jobs.png" alt=""/><a href="#">Jobs</a></div>
+                            <div className="categoryColumn"><button onClick={()=>{handleMobilesButton()}}><img src="Mobiles.png" alt=""/>Mobiles</button></div>
+                            <div className="categoryColumn"><button onClick={()=>{handlePropertyButton()}}><img src="property.png" alt=""/>Property</button></div>
+                            <div className="categoryColumn"><button onClick={()=>{handleVehiclesButton()}}><img src="vehicles.png" alt=""/>Vehicles</button></div>
+                            <div className="categoryColumn"><button onClick={()=>{handleJobsButton()}}><img src="jobs.png" alt=""/>Jobs</button></div>
                         </div>
                         <div className="showcaseCategoriesRowTwo">
                             <div className="showcaseCategoriesRowTwoItemOne">New!</div>
