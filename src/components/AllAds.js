@@ -109,6 +109,7 @@ const AllAds = () => {
       if(adsStatus === 'loading') {
         content = <div>Loading... Please wait...</div>
       } else if (adsStatus === 'succeeded') {
+        if (results.length) {
           content = 
           <div>
           {
@@ -119,6 +120,13 @@ const AllAds = () => {
                 })
           }
           </div>
+        } else {
+          content = 
+          <div>
+          {'No advertisements found!'}
+          </div>
+        }
+          
       }
 
     return (

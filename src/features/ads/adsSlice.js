@@ -325,7 +325,7 @@ export const adsSlice = createSlice({
     },
 
     [fetchMobilesAds.pending]: (state, action) => {
-      // state.status = 'loading'
+      state.status = 'loading'
     },
     [fetchMobilesAds.fulfilled]: (state, action) => {
       state.status = 'succeeded'
@@ -333,12 +333,12 @@ export const adsSlice = createSlice({
       state.ads = state.ads.concat(action.payload);
     },
     [fetchMobilesAds.rejected]: (state, action) => {
-      // state.status = 'failed'
+      state.status = 'failed'
       state.error = action.error.message
     },
 
     [fetchEssentialssAds.pending]: (state, action) => {
-      // state.status = 'loading'
+      state.status = 'loading'
     },
     [fetchEssentialssAds.fulfilled]: (state, action) => {
       state.status = 'succeeded'
@@ -346,12 +346,12 @@ export const adsSlice = createSlice({
       state.ads = state.ads.concat(action.payload);
     },
     [fetchEssentialssAds.rejected]: (state, action) => {
-      // state.status = 'failed'
+      state.status = 'failed'
       state.error = action.error.message
     },
 
     [fetchElectronicssAds.pending]: (state, action) => {
-      // state.status = 'loading'
+      state.status = 'loading'
     },
     [fetchElectronicssAds.fulfilled]: (state, action) => {
       state.status = 'succeeded'
@@ -359,12 +359,12 @@ export const adsSlice = createSlice({
       state.ads = state.ads.concat(action.payload);
     },
     [fetchElectronicssAds.rejected]: (state, action) => {
-      // state.status = 'failed'
+      state.status = 'failed'
       state.error = action.error.message
     },
 
     [fetchVehiclesAds.pending]: (state, action) => {
-      // state.status = 'loading'
+      state.status = 'loading'
     },
     [fetchVehiclesAds.fulfilled]: (state, action) => {
       state.status = 'succeeded'
@@ -372,12 +372,12 @@ export const adsSlice = createSlice({
       state.ads = state.ads.concat(action.payload);
     },
     [fetchVehiclesAds.rejected]: (state, action) => {
-      // state.status = 'failed'
+      state.status = 'failed'
       state.error = action.error.message
     },
 
     [fetchPropertyAds.pending]: (state, action) => {
-      // state.status = 'loading'
+      state.status = 'loading'
     },
     [fetchPropertyAds.fulfilled]: (state, action) => {
       state.status = 'succeeded'
@@ -385,12 +385,12 @@ export const adsSlice = createSlice({
       state.ads = state.ads.concat(action.payload);
     },
     [fetchPropertyAds.rejected]: (state, action) => {
-      // state.status = 'failed'
+      state.status = 'failed'
       state.error = action.error.message
     },
 
     [fetchServicesAds.pending]: (state, action) => {
-      // state.status = 'loading'
+      state.status = 'loading'
     },
     [fetchServicesAds.fulfilled]: (state, action) => {
       state.status = 'succeeded'
@@ -398,12 +398,12 @@ export const adsSlice = createSlice({
       state.ads = state.ads.concat(action.payload);
     },
     [fetchServicesAds.rejected]: (state, action) => {
-      // state.status = 'failed'
+      state.status = 'failed'
       state.error = action.error.message
     },
 
     [fetchHomeLivingAds.pending]: (state, action) => {
-      // state.status = 'loading'
+      state.status = 'loading'
     },
     [fetchHomeLivingAds.fulfilled]: (state, action) => {
       state.status = 'succeeded'
@@ -411,12 +411,12 @@ export const adsSlice = createSlice({
       state.ads = state.ads.concat(action.payload);
     },
     [fetchHomeLivingAds.rejected]: (state, action) => {
-      // state.status = 'failed'
+      state.status = 'failed'
       state.error = action.error.message
     },
 
     [fetchFashionBeautyAds.pending]: (state, action) => {
-      // state.status = 'loading'
+      state.status = 'loading'
     },
     [fetchFashionBeautyAds.fulfilled]: (state, action) => {
       state.status = 'succeeded'
@@ -424,12 +424,12 @@ export const adsSlice = createSlice({
       state.ads = state.ads.concat(action.payload);
     },
     [fetchFashionBeautyAds.rejected]: (state, action) => {
-      // state.status = 'failed'
+      state.status = 'failed'
       state.error = action.error.message
     },
 
     [fetchHobbiesSportsKidsAds.pending]: (state, action) => {
-      // state.status = 'loading'
+      state.status = 'loading'
     },
     [fetchHobbiesSportsKidsAds.fulfilled]: (state, action) => {
       state.status = 'succeeded'
@@ -437,12 +437,12 @@ export const adsSlice = createSlice({
       state.ads = state.ads.concat(action.payload);
     },
     [fetchHobbiesSportsKidsAds.rejected]: (state, action) => {
-      // state.status = 'failed'
+      state.status = 'failed'
       state.error = action.error.message
     },
 
     [fetchBusinessIndustryAds.pending]: (state, action) => {
-      // state.status = 'loading'
+      state.status = 'loading'
     },
     [fetchBusinessIndustryAds.fulfilled]: (state, action) => {
       state.status = 'succeeded'
@@ -450,12 +450,12 @@ export const adsSlice = createSlice({
       state.ads = state.ads.concat(action.payload);
     },
     [fetchBusinessIndustryAds.rejected]: (state, action) => {
-      // state.status = 'failed'
+      state.status = 'failed'
       state.error = action.error.message
     },
 
     [fetchEducationAds.pending]: (state, action) => {
-      // state.status = 'loading'
+      state.status = 'loading'
     },
     [fetchEducationAds.fulfilled]: (state, action) => {
       state.status = 'succeeded'
@@ -463,12 +463,12 @@ export const adsSlice = createSlice({
       state.ads = state.ads.concat(action.payload);
     },
     [fetchEducationAds.rejected]: (state, action) => {
-      // state.status = 'failed'
+      state.status = 'failed'
       state.error = action.error.message
     },
 
     [fetchPetsAnimalsAds.pending]: (state, action) => {
-      // state.status = 'loading'
+      state.status = 'loading'
     },
     [fetchPetsAnimalsAds.fulfilled]: (state, action) => {
       state.status = 'succeeded'
@@ -476,12 +476,12 @@ export const adsSlice = createSlice({
       state.ads = state.ads.concat(action.payload);
     },
     [fetchPetsAnimalsAds.rejected]: (state, action) => {
-      // state.status = 'failed'
+      state.status = 'failed'
       state.error = action.error.message
     },
 
     [fetchAgricultureAds.pending]: (state, action) => {
-      // state.status = 'loading'
+      state.status = 'loading'
     },
     [fetchAgricultureAds.fulfilled]: (state, action) => {
       state.status = 'succeeded'
@@ -489,7 +489,7 @@ export const adsSlice = createSlice({
       state.ads = state.ads.concat(action.payload);
     },
     [fetchAgricultureAds.rejected]: (state, action) => {
-      // state.status = 'failed'
+      state.status = 'failed'
       state.error = action.error.message
     },
 
