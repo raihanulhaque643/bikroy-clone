@@ -46,11 +46,11 @@ const AllAds = () => {
         ad.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())
       );
 
-    // useEffect(() => {
-    //     if (adsStatus === 'idle') {
-    //       dispatch(fetchAllAds());
-    //     }
-    //   }, [adsStatus, dispatch]);
+    useEffect(() => {
+        if (adsStatus === 'idle') {
+          dispatch(fetchAllAds());
+        }
+      }, [adsStatus, dispatch]);
 
     const handleEssentialsButton = () => {
         dispatch(fetchEssentialssAds());

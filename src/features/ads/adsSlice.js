@@ -17,6 +17,110 @@ export const fetchAllAds = createAsyncThunk('ads/fetchAllAds', async () => {
   return response;
 })
 
+export const fetchDhakaAds = createAsyncThunk('ads/fetchDhakaAds', async () => {
+  const ref = db.collection("ads").where("city", "==", "Dhaka" );
+  const response = await ref.get().then((querySnapshot) => {
+    let adsArray =[];
+    querySnapshot.forEach(doc => {
+      adsArray.push(doc.data());
+    })
+    console.log(adsArray);
+    return adsArray;
+  })
+  return response;
+})
+
+export const fetchChattogramAds = createAsyncThunk('ads/fetchChattogramAds', async () => {
+  const ref = db.collection("ads").where("city", "==", "chattogram" );
+  const response = await ref.get().then((querySnapshot) => {
+    let adsArray =[];
+    querySnapshot.forEach(doc => {
+      adsArray.push(doc.data());
+    })
+    console.log(adsArray);
+    return adsArray;
+  })
+  return response;
+})
+
+export const fetchSylhetAds = createAsyncThunk('ads/fetchSylhetAds', async () => {
+  const ref = db.collection("ads").where("city", "==", "sylhet" );
+  const response = await ref.get().then((querySnapshot) => {
+    let adsArray =[];
+    querySnapshot.forEach(doc => {
+      adsArray.push(doc.data());
+    })
+    console.log(adsArray);
+    return adsArray;
+  })
+  return response;
+})
+
+export const fetchKhulnaAds = createAsyncThunk('ads/fetchKhulnaAds', async () => {
+  const ref = db.collection("ads").where("city", "==", "khulna" );
+  const response = await ref.get().then((querySnapshot) => {
+    let adsArray =[];
+    querySnapshot.forEach(doc => {
+      adsArray.push(doc.data());
+    })
+    console.log(adsArray);
+    return adsArray;
+  })
+  return response;
+})
+
+export const fetchBarishalAds = createAsyncThunk('ads/fetchBarishalAds', async () => {
+  const ref = db.collection("ads").where("city", "==", "barishal" );
+  const response = await ref.get().then((querySnapshot) => {
+    let adsArray =[];
+    querySnapshot.forEach(doc => {
+      adsArray.push(doc.data());
+    })
+    console.log(adsArray);
+    return adsArray;
+  })
+  return response;
+})
+
+export const fetchRajshahiAds = createAsyncThunk('ads/fetchRajshahiAds', async () => {
+  const ref = db.collection("ads").where("city", "==", "rajshahi" );
+  const response = await ref.get().then((querySnapshot) => {
+    let adsArray =[];
+    querySnapshot.forEach(doc => {
+      adsArray.push(doc.data());
+    })
+    console.log(adsArray);
+    return adsArray;
+  })
+  return response;
+})
+
+export const fetchRangpurAds = createAsyncThunk('ads/fetchRangpurAds', async () => {
+  const ref = db.collection("ads").where("city", "==", "rangpur" );
+  const response = await ref.get().then((querySnapshot) => {
+    let adsArray =[];
+    querySnapshot.forEach(doc => {
+      adsArray.push(doc.data());
+    })
+    console.log(adsArray);
+    return adsArray;
+  })
+  return response;
+})
+
+export const fetchMymensinghAds = createAsyncThunk('ads/fetchMymensinghAds', async () => {
+  const ref = db.collection("ads").where("city", "==", "mymensignh" );
+  const response = await ref.get().then((querySnapshot) => {
+    let adsArray =[];
+    querySnapshot.forEach(doc => {
+      adsArray.push(doc.data());
+    })
+    console.log(adsArray);
+    return adsArray;
+  })
+  return response;
+})
+
 export const fetchMobilesAds = createAsyncThunk('ads/fetchMobilesAds', async () => {
   const ref = db.collection("ads").where("category", "==", "mobiles" );
   const response = await ref.get().then((querySnapshot) => {
@@ -320,6 +424,110 @@ export const adsSlice = createSlice({
       state.ads = state.ads.concat(action.payload);
     },
     [fetchAllAds.rejected]: (state, action) => {
+      state.status = 'failed'
+      state.error = action.error.message
+    },
+
+    [fetchDhakaAds.pending]: (state, action) => {
+      state.status = 'loading'
+    },
+    [fetchDhakaAds.fulfilled]: (state, action) => {
+      state.status = 'succeeded'
+      state.ads = [];
+      state.ads = state.ads.concat(action.payload);
+    },
+    [fetchDhakaAds.rejected]: (state, action) => {
+      state.status = 'failed'
+      state.error = action.error.message
+    },
+
+    [fetchChattogramAds.pending]: (state, action) => {
+      state.status = 'loading'
+    },
+    [fetchChattogramAds.fulfilled]: (state, action) => {
+      state.status = 'succeeded'
+      state.ads = [];
+      state.ads = state.ads.concat(action.payload);
+    },
+    [fetchChattogramAds.rejected]: (state, action) => {
+      state.status = 'failed'
+      state.error = action.error.message
+    },
+
+    [fetchSylhetAds.pending]: (state, action) => {
+      state.status = 'loading'
+    },
+    [fetchSylhetAds.fulfilled]: (state, action) => {
+      state.status = 'succeeded'
+      state.ads = [];
+      state.ads = state.ads.concat(action.payload);
+    },
+    [fetchSylhetAds.rejected]: (state, action) => {
+      state.status = 'failed'
+      state.error = action.error.message
+    },
+
+    [fetchKhulnaAds.pending]: (state, action) => {
+      state.status = 'loading'
+    },
+    [fetchKhulnaAds.fulfilled]: (state, action) => {
+      state.status = 'succeeded'
+      state.ads = [];
+      state.ads = state.ads.concat(action.payload);
+    },
+    [fetchKhulnaAds.rejected]: (state, action) => {
+      state.status = 'failed'
+      state.error = action.error.message
+    },
+
+    [fetchBarishalAds.pending]: (state, action) => {
+      state.status = 'loading'
+    },
+    [fetchBarishalAds.fulfilled]: (state, action) => {
+      state.status = 'succeeded'
+      state.ads = [];
+      state.ads = state.ads.concat(action.payload);
+    },
+    [fetchBarishalAds.rejected]: (state, action) => {
+      state.status = 'failed'
+      state.error = action.error.message
+    },
+
+    [fetchRajshahiAds.pending]: (state, action) => {
+      state.status = 'loading'
+    },
+    [fetchRajshahiAds.fulfilled]: (state, action) => {
+      state.status = 'succeeded'
+      state.ads = [];
+      state.ads = state.ads.concat(action.payload);
+    },
+    [fetchRajshahiAds.rejected]: (state, action) => {
+      state.status = 'failed'
+      state.error = action.error.message
+    },
+
+    [fetchRangpurAds.pending]: (state, action) => {
+      state.status = 'loading'
+    },
+    [fetchRangpurAds.fulfilled]: (state, action) => {
+      state.status = 'succeeded'
+      state.ads = [];
+      state.ads = state.ads.concat(action.payload);
+    },
+    [fetchRangpurAds.rejected]: (state, action) => {
+      state.status = 'failed'
+      state.error = action.error.message
+    },
+
+    [fetchMymensinghAds.pending]: (state, action) => {
+      state.status = 'loading'
+    },
+    [fetchMymensinghAds.fulfilled]: (state, action) => {
+      state.status = 'succeeded'
+      state.ads = [];
+      state.ads = state.ads.concat(action.payload);
+    },
+    [fetchMymensinghAds.rejected]: (state, action) => {
       state.status = 'failed'
       state.error = action.error.message
     },

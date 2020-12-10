@@ -58,7 +58,7 @@ const PostAdForm = () => {
             <div className="formFieldGroup">
            <div className="title">City</div>
            <Field className="field" as="select" name="city" style={{width: '100%'}}>
-              <option value="dhaka">Dhaka</option>
+              <option value="Dhaka">Dhaka</option>
               <option value="chattogram">Chattogram</option>
               <option value="sylhet">Sylhet</option>
               <option value="khulna">Khulna</option>
