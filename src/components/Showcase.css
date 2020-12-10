@@ -138,16 +138,23 @@
     text-align: right;
 }
 
-.showcaseColumnThree > .cities ul a {
+.showcaseColumnThree > .cities ul button {
     text-decoration: none;
     color: #0074ba;
+    outline: none;
+    border: none;
+    background: white;
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px;
 }
 
 .showcaseColumnThree > .cities ul li {
     margin: 0 0 8px;
 }
 
-.showcaseColumnThree > .cities ul a:hover {
+.showcaseColumnThree > .cities ul button:hover {
     text-decoration: none;
     color: #00547e;
+    cursor: pointer;
 }

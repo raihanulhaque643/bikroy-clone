@@ -66,27 +66,27 @@ const Showcase = () => {
                     <div className="cities">
                         <ul>
                             <li><h3>Cities</h3></li>
-                            <li><a href="#">Dhaka</a></li>
-                            <li><a href="#">Chattogram</a></li>
-                            <li><a href="#">Sylhet</a></li>
-                            <li><a href="#">Khulna</a></li>
-                            <li><a href="#">Barishal</a></li>
-                            <li><a href="#">Rajshahi</a></li>
-                            <li><a href="#">Rangpur</a></li>
-                            <li><a href="#">Mymensingh</a></li>
+                            <li><button>Dhaka</button></li>
+                            <li><button>Chattogram</button></li>
+                            <li><button>Sylhet</button></li>
+                            <li><button>Khulna</button></li>
+                            <li><button>Barishal</button></li>
+                            <li><button>Rajshahi</button></li>
+                            <li><button>Rangpur</button></li>
+                            <li><button>Mymensingh</button></li>
                         </ul>
                     </div>
                     <div className="cities">
                         <ul>
                             <li><h3>Divisions</h3></li>
-                            <li><a href="#">Dhaka Division</a></li>
-                            <li><a href="#">Chattogram Division</a></li>
-                            <li><a href="#">Sylhet Division</a></li>
-                            <li><a href="#">Khulna Division</a></li>
-                            <li><a href="#">Barishal Division</a></li>
-                            <li><a href="#">Rajshahi Division</a></li>
-                            <li><a href="#">Rangpur Division</a></li>
-                            <li><a href="#">Mymensingh Division</a></li>
+                            <li><button>Dhaka Division</button></li>
+                            <li><button>Chattogram Division</button></li>
+                            <li><button>Sylhet Division</button></li>
+                            <li><button>Khulna Division</button></li>
+                            <li><button>Barishal Division</button></li>
+                            <li><button>Rajshahi Division</button></li>
+                            <li><button>Rangpur Division</button></li>
+                            <li><button>Mymensingh Division</button></li>
                         </ul>
                     </div>
                 </div>
