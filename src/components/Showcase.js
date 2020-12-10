@@ -2,13 +2,61 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import './Showcase.css';
-import { fetchAllAds, fetchMobilesAds, fetchPropertyAds, fetchVehiclesAds } from '../features/ads/adsSlice';
+import { fetchAllAds, fetchBarishalAds, fetchChattogramAds, fetchDhakaAds, fetchKhulnaAds, fetchMobilesAds, fetchMymensinghAds, fetchPropertyAds, fetchRajshahiAds, fetchRangpurAds, fetchSylhetAds, fetchVehiclesAds } from '../features/ads/adsSlice';
 
 const Showcase = () => {
 
     const dispatch = useDispatch();
 
     const history = useHistory();
+
+    const handleDhaka = () => {
+        dispatch(fetchDhakaAds());
+        history.push('/all-ads');
+        window.scrollTo(0, 0);
+    }
+
+    const handleChattogram = () => {
+        dispatch(fetchChattogramAds());
+        history.push('/all-ads');
+        window.scrollTo(0, 0);
+    }
+
+    const handleSylhet = () => {
+        dispatch(fetchSylhetAds());
+        history.push('/all-ads');
+        window.scrollTo(0, 0);
+    }
+
+    const handleKhulna = () => {
+        dispatch(fetchKhulnaAds());
+        history.push('/all-ads');
+        window.scrollTo(0, 0);
+    }
+
+    const handleBarishal = () => {
+        dispatch(fetchBarishalAds());
+        history.push('/all-ads');
+        window.scrollTo(0, 0);
+    }
+
+    const handleRajshahi = () => {
+        dispatch(fetchRajshahiAds());
+        history.push('/all-ads');
+        window.scrollTo(0, 0);
+    }
+
+    const handleRangpur = () => {
+        dispatch(fetchRangpurAds());
+        history.push('/all-ads');
+        window.scrollTo(0, 0);
+    }
+
+    const handleMymensingh = () => {
+        dispatch(fetchMymensinghAds());
+        history.push('/all-ads');
+        window.scrollTo(0, 0);
+    }
 
     const handlePropertyButton = () => {
         dispatch(fetchPropertyAds());
@@ -66,27 +114,27 @@ const Showcase = () => {
                     <div className="cities">
                         <ul>
                             <li><h3>Cities</h3></li>
-                            <li><button>Dhaka</button></li>
-                            <li><button>Chattogram</button></li>
-                            <li><button>Sylhet</button></li>
-                            <li><button>Khulna</button></li>
-                            <li><button>Barishal</button></li>
-                            <li><button>Rajshahi</button></li>
-                            <li><button>Rangpur</button></li>
-                            <li><button>Mymensingh</button></li>
+                            <li><button onClick={()=>{handleDhaka()}}>Dhaka</button></li>
+                            <li><button onClick={()=>{handleChattogram()}}>Chattogram</button></li>
+                            <li><button onClick={()=>{handleSylhet()}}>Sylhet</button></li>
+                            <li><button onClick={()=>{handleKhulna()}}>Khulna</button></li>
+                            <li><button onClick={()=>{handleBarishal()}}>Barishal</button></li>
+                            <li><button onClick={()=>{handleRajshahi()}}>Rajshahi</button></li>
+                            <li><button onClick={()=>{handleRangpur()}}>Rangpur</button></li>
+                            <li><button onClick={()=>{handleMymensingh()}}>Mymensingh</button></li>
                         </ul>
                     </div>
                     <div className="cities">
                         <ul>
                             <li><h3>Divisions</h3></li>
-                            <li><button>Dhaka Division</button></li>
-                            <li><button>Chattogram Division</button></li>
-                            <li><button>Sylhet Division</button></li>
-                            <li><button>Khulna Division</button></li>
-                            <li><button>Barishal Division</button></li>
-                            <li><button>Rajshahi Division</button></li>
-                            <li><button>Rangpur Division</button></li>
-                            <li><button>Mymensingh Division</button></li>
+                            <li><button onClick={()=>{handleDhaka()}}>Dhaka Division</button></li>
+                            <li><button onClick={()=>{handleChattogram()}}>Chattogram Division</button></li>
+                            <li><button onClick={()=>{handleSylhet()}}>Sylhet Division</button></li>
+                            <li><button onClick={()=>{handleKhulna()}}>Khulna Division</button></li>
+                            <li><button onClick={()=>{handleBarishal()}}>Barishal Division</button></li>
+                            <li><button onClick={()=>{handleRajshahi()}}>Rajshahi Division</button></li>
+                            <li><button onClick={()=>{handleRangpur()}}>Rangpur Division</button></li>
+                            <li><button onClick={()=>{handleMymensingh()}}>Mymensingh Division</button></li>
                         </ul>
                     </div>
                 </div>
