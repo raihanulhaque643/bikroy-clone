@@ -11,6 +11,7 @@ const AdInfo = (props) => {
 
     const handleClick = () => {
         history.push(`/ad-details/${ad.uniqueAdId}`);
+        window.scrollTo(0,0);
     }
 
     return (
