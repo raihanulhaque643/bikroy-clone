@@ -18,6 +18,7 @@ import Authentication from './components/Authentication';
 import PostAd from './components/PostAd';
 import PostAdForm from './components/PostAdForm';
 import AllAds from './components/AllAds';
+import AdDetails from './components/AdDetails';
 
 function App() {
   return (
@@ -54,6 +55,10 @@ function App() {
 
       <Route path="/all-ads">
         <AllAds /> 
+      </Route>
+
+      <Route path="/ad-details/:uniqueAdId">
+        <AdDetails /> 
       </Route>
 
       <Route path="/">
