@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .bodyContainer {
     width: 100%;
     background: #e7edee;
@@ -11,7 +15,7 @@
 }
 
 .bodyMainColumn {
-    width: 984px;
+    max-width: 984px;
     padding: 20px 0px;
 }
 
@@ -41,6 +45,7 @@
     justify-content: flex-start;
     align-items: center;
     margin: 10px 0px;
+    width: 100%;
 }
 
 .bodyRowOneLeft, .bodyRowOneRight {

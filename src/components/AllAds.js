@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { 
     fetchAgricultureAds, 
     fetchAllAds, 
@@ -24,6 +25,8 @@ import './CustomCatButtonWithImg.css';
 
 const AllAds = () => {
 
+    const history = useHistory();
+
     const ads = useSelector(selectAds);
 
     const dispatch = useDispatch();
@@ -43,11 +46,11 @@ const AllAds = () => {
         ad.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())
       );
 
-    useEffect(() => {
-        if (adsStatus === 'idle') {
-          dispatch(fetchAllAds());
-        }
-      }, [adsStatus, dispatch]);
+    // useEffect(() => {
+    //     if (adsStatus === 'idle') {
+    //       dispatch(fetchAllAds());
+    //     }
+    //   }, [adsStatus, dispatch]);
 
     const handleEssentialsButton = () => {
         dispatch(fetchEssentialssAds());

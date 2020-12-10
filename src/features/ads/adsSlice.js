@@ -328,7 +328,7 @@ export const adsSlice = createSlice({
       // state.status = 'loading'
     },
     [fetchMobilesAds.fulfilled]: (state, action) => {
-      // state.status = 'succeeded'
+      state.status = 'succeeded'
       state.ads = [];
       state.ads = state.ads.concat(action.payload);
     },
@@ -341,7 +341,7 @@ export const adsSlice = createSlice({
       // state.status = 'loading'
     },
     [fetchEssentialssAds.fulfilled]: (state, action) => {
-      // state.status = 'succeeded'
+      state.status = 'succeeded'
       state.ads = [];
       state.ads = state.ads.concat(action.payload);
     },
@@ -354,7 +354,7 @@ export const adsSlice = createSlice({
       // state.status = 'loading'
     },
     [fetchElectronicssAds.fulfilled]: (state, action) => {
-      // state.status = 'succeeded'
+      state.status = 'succeeded'
       state.ads = [];
       state.ads = state.ads.concat(action.payload);
     },
@@ -367,7 +367,7 @@ export const adsSlice = createSlice({
       // state.status = 'loading'
     },
     [fetchVehiclesAds.fulfilled]: (state, action) => {
-      // state.status = 'succeeded'
+      state.status = 'succeeded'
       state.ads = [];
       state.ads = state.ads.concat(action.payload);
     },
@@ -380,7 +380,7 @@ export const adsSlice = createSlice({
       // state.status = 'loading'
     },
     [fetchPropertyAds.fulfilled]: (state, action) => {
-      // state.status = 'succeeded'
+      state.status = 'succeeded'
       state.ads = [];
       state.ads = state.ads.concat(action.payload);
     },
@@ -393,7 +393,7 @@ export const adsSlice = createSlice({
       // state.status = 'loading'
     },
     [fetchServicesAds.fulfilled]: (state, action) => {
-      // state.status = 'succeeded'
+      state.status = 'succeeded'
       state.ads = [];
       state.ads = state.ads.concat(action.payload);
     },
@@ -406,7 +406,7 @@ export const adsSlice = createSlice({
       // state.status = 'loading'
     },
     [fetchHomeLivingAds.fulfilled]: (state, action) => {
-      // state.status = 'succeeded'
+      state.status = 'succeeded'
       state.ads = [];
       state.ads = state.ads.concat(action.payload);
     },
@@ -419,7 +419,7 @@ export const adsSlice = createSlice({
       // state.status = 'loading'
     },
     [fetchFashionBeautyAds.fulfilled]: (state, action) => {
-      // state.status = 'succeeded'
+      state.status = 'succeeded'
       state.ads = [];
       state.ads = state.ads.concat(action.payload);
     },
@@ -432,7 +432,7 @@ export const adsSlice = createSlice({
       // state.status = 'loading'
     },
     [fetchHobbiesSportsKidsAds.fulfilled]: (state, action) => {
-      // state.status = 'succeeded'
+      state.status = 'succeeded'
       state.ads = [];
       state.ads = state.ads.concat(action.payload);
     },
@@ -445,7 +445,7 @@ export const adsSlice = createSlice({
       // state.status = 'loading'
     },
     [fetchBusinessIndustryAds.fulfilled]: (state, action) => {
-      // state.status = 'succeeded'
+      state.status = 'succeeded'
       state.ads = [];
       state.ads = state.ads.concat(action.payload);
     },
@@ -458,7 +458,7 @@ export const adsSlice = createSlice({
       // state.status = 'loading'
     },
     [fetchEducationAds.fulfilled]: (state, action) => {
-      // state.status = 'succeeded'
+      state.status = 'succeeded'
       state.ads = [];
       state.ads = state.ads.concat(action.payload);
     },
@@ -471,7 +471,7 @@ export const adsSlice = createSlice({
       // state.status = 'loading'
     },
     [fetchPetsAnimalsAds.fulfilled]: (state, action) => {
-      // state.status = 'succeeded'
+      state.status = 'succeeded'
       state.ads = [];
       state.ads = state.ads.concat(action.payload);
     },
@@ -484,7 +484,7 @@ export const adsSlice = createSlice({
       // state.status = 'loading'
     },
     [fetchAgricultureAds.fulfilled]: (state, action) => {
-      // state.status = 'succeeded'
+      state.status = 'succeeded'
       state.ads = [];
       state.ads = state.ads.concat(action.payload);
     },
