@@ -115,7 +115,7 @@ const AllAds = () => {
           {
                 results.map((ad) => {
                     return (
-                        <AdInfo info={ad} />
+                        <AdInfo info={ad} key={ad.uniqueAdId} />
                     )
                 })
           }
