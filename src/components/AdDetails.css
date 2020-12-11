@@ -73,8 +73,8 @@
 
 .adDetailsBodyContentLeftImageContainer > img {
     height: 400px;
-    width: auto;
-    object-fit: scale-down;
+    max-width: 474px;
+    object-fit: contain;
 }
 
 .adDetailsBodyContentRightColumn {
