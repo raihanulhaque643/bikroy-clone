@@ -50,6 +50,7 @@ const PostAdForm = () => {
        onSubmit={(values, { setSubmitting }) => {
          dispatch(uploadImageAsync(values));
          history.push('/all-ads');
+         window.scrollTo(0, 0);
        }}
      >
        {({ isSubmitting, setFieldValue }) => (
