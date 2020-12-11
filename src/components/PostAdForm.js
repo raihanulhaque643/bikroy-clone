@@ -59,13 +59,13 @@ const PostAdForm = () => {
            <div className="title">City</div>
            <Field className="field" as="select" name="city" style={{width: '100%'}}>
               <option value="Dhaka">Dhaka</option>
-              <option value="chattogram">Chattogram</option>
-              <option value="sylhet">Sylhet</option>
-              <option value="khulna">Khulna</option>
-              <option value="barishal">Barishal</option>
-              <option value="rajshahi">Rajshahi</option>
-              <option value="rangpur">Rangpur</option>
-              <option value="mymensignh">Mymensingh</option>
+              <option value="Chattogram">Chattogram</option>
+              <option value="Sylhet">Sylhet</option>
+              <option value="Khulna">Khulna</option>
+              <option value="Barishal">Barishal</option>
+              <option value="Rajshahi">Rajshahi</option>
+              <option value="Rangpur">Rangpur</option>
+              <option value="Mymensignh">Mymensingh</option>
            </Field>
            <ErrorMessage style={{color: 'red', fontSize: '12px'}} name="city" component="div" />
            </div>

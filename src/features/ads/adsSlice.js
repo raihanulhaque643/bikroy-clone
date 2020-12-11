@@ -31,7 +31,7 @@ export const fetchDhakaAds = createAsyncThunk('ads/fetchDhakaAds', async () => {
 })
 
 export const fetchChattogramAds = createAsyncThunk('ads/fetchChattogramAds', async () => {
-  const ref = db.collection("ads").where("city", "==", "chattogram" ).orderBy("timestamp", "desc");
+  const ref = db.collection("ads").where("city", "==", "Chattogram" ).orderBy("timestamp", "desc");
   const response = await ref.get().then((querySnapshot) => {
     let adsArray =[];
     querySnapshot.forEach(doc => {
@@ -44,7 +44,7 @@ export const fetchChattogramAds = createAsyncThunk('ads/fetchChattogramAds', asy
 })
 
 export const fetchSylhetAds = createAsyncThunk('ads/fetchSylhetAds', async () => {
-  const ref = db.collection("ads").where("city", "==", "sylhet").orderBy("timestamp", "desc");
+  const ref = db.collection("ads").where("city", "==", "Sylhet").orderBy("timestamp", "desc");
   const response = await ref.get().then((querySnapshot) => {
     let adsArray =[];
     querySnapshot.forEach(doc => {
@@ -57,7 +57,7 @@ export const fetchSylhetAds = createAsyncThunk('ads/fetchSylhetAds', async () =>
 })
 
 export const fetchKhulnaAds = createAsyncThunk('ads/fetchKhulnaAds', async () => {
-  const ref = db.collection("ads").where("city", "==", "khulna").orderBy("timestamp", "desc");
+  const ref = db.collection("ads").where("city", "==", "Khulna").orderBy("timestamp", "desc");
   const response = await ref.get().then((querySnapshot) => {
     let adsArray =[];
     querySnapshot.forEach(doc => {
@@ -70,7 +70,7 @@ export const fetchKhulnaAds = createAsyncThunk('ads/fetchKhulnaAds', async () =>
 })
 
 export const fetchBarishalAds = createAsyncThunk('ads/fetchBarishalAds', async () => {
-  const ref = db.collection("ads").where("city", "==", "barishal").orderBy("timestamp", "desc");
+  const ref = db.collection("ads").where("city", "==", "Barishal").orderBy("timestamp", "desc");
   const response = await ref.get().then((querySnapshot) => {
     let adsArray =[];
     querySnapshot.forEach(doc => {
@@ -83,7 +83,7 @@ export const fetchBarishalAds = createAsyncThunk('ads/fetchBarishalAds', async (
 })
 
 export const fetchRajshahiAds = createAsyncThunk('ads/fetchRajshahiAds', async () => {
-  const ref = db.collection("ads").where("city", "==", "rajshahi").orderBy("timestamp", "desc");
+  const ref = db.collection("ads").where("city", "==", "Rajshahi").orderBy("timestamp", "desc");
   const response = await ref.get().then((querySnapshot) => {
     let adsArray =[];
     querySnapshot.forEach(doc => {
@@ -96,7 +96,7 @@ export const fetchRajshahiAds = createAsyncThunk('ads/fetchRajshahiAds', async (
 })
 
 export const fetchRangpurAds = createAsyncThunk('ads/fetchRangpurAds', async () => {
-  const ref = db.collection("ads").where("city", "==", "rangpur").orderBy("timestamp", "desc");
+  const ref = db.collection("ads").where("city", "==", "Rangpur").orderBy("timestamp", "desc");
   const response = await ref.get().then((querySnapshot) => {
     let adsArray =[];
     querySnapshot.forEach(doc => {
@@ -109,7 +109,7 @@ export const fetchRangpurAds = createAsyncThunk('ads/fetchRangpurAds', async () 
 })
 
 export const fetchMymensinghAds = createAsyncThunk('ads/fetchMymensinghAds', async () => {
-  const ref = db.collection("ads").where("city", "==", "mymensignh").orderBy("timestamp", "desc");
+  const ref = db.collection("ads").where("city", "==", "Mymensignh").orderBy("timestamp", "desc");
   const response = await ref.get().then((querySnapshot) => {
     let adsArray =[];
     querySnapshot.forEach(doc => {
