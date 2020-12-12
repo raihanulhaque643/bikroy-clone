@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import './Showcase.css';
-import { fetchAllAds, fetchBarishalAds, fetchChattogramAds, fetchDhakaAds, fetchKhulnaAds, fetchMobilesAds, fetchMymensinghAds, fetchPropertyAds, fetchRajshahiAds, fetchRangpurAds, fetchSylhetAds, fetchVehiclesAds } from '../features/ads/adsSlice';
+import { fetchAllAds, fetchBarishalAds, fetchChattogramAds, fetchDhakaAds, fetchJobsAds, fetchKhulnaAds, fetchMobilesAds, fetchMymensinghAds, fetchPropertyAds, fetchRajshahiAds, fetchRangpurAds, fetchSylhetAds, fetchVehiclesAds } from '../features/ads/adsSlice';
 
 const Showcase = () => {
 
@@ -77,7 +77,7 @@ const Showcase = () => {
       }
 
       const handleJobsButton = () => {
-        dispatch(fetchAllAds());
+        dispatch(fetchJobsAds());
         history.push('/all-ads');
         window.scrollTo(0, 0);
       }

@@ -11,6 +11,7 @@ import {
     fetchFashionBeautyAds, 
     fetchHobbiesSportsKidsAds, 
     fetchHomeLivingAds, 
+    fetchJobsAds, 
     fetchMobilesAds, 
     fetchPetsAnimalsAds, 
     fetchPropertyAds, 
@@ -44,7 +45,7 @@ const Body = () => {
       }
 
       const handleJobsButton = () => {
-        dispatch(fetchAllAds());
+        dispatch(fetchJobsAds());
         history.push('/all-ads');
         window.scrollTo(0, 0);
       }
