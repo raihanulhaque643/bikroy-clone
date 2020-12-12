@@ -174,7 +174,7 @@ export const fetchVehiclesAds = createAsyncThunk('ads/fetchVehiclesAds', async (
 })
 
 export const fetchPropertyAds = createAsyncThunk('ads/fetchPropertyAds', async () => {
-  const ref = db.collection("ads").where("category", "==", "proptery" );
+  const ref = db.collection("ads").where("category", "==", "property" );
   const response = await ref.get().then((querySnapshot) => {
     let adsArray =[];
     querySnapshot.forEach(doc => {
@@ -292,6 +292,19 @@ export const fetchAgricultureAds = createAsyncThunk('ads/fetchAgricultureAds', a
 
 export const fetchJobsAds = createAsyncThunk('ads/fetchJobsAds', async () => {
   const ref = db.collection("ads").where("category", "==", "jobs" );
+  const response = await ref.get().then((querySnapshot) => {
+    let adsArray =[];
+    querySnapshot.forEach(doc => {
+      adsArray.push(doc.data());
+    })
+    console.log(adsArray);
+    return adsArray;
+  })
+  return response;
+})
+
+export const fetchOverseasJobsAds = createAsyncThunk('ads/fetchOverseasJobsAds', async () => {
+  const ref = db.collection("ads").where("category", "==", "overseasJobs" );
   const response = await ref.get().then((querySnapshot) => {
     let adsArray =[];
     querySnapshot.forEach(doc => {
@@ -723,6 +736,19 @@ export const adsSlice = createSlice({
       state.ads = state.ads.concat(action.payload);
     },
     [fetchJobsAds.rejected]: (state, action) => {
+      state.status = 'failed'
+      state.error = action.error.message
+    },
+
+    [fetchOverseasJobsAds.pending]: (state, action) => {
+      state.status = 'loading'
+    },
+    [fetchOverseasJobsAds.fulfilled]: (state, action) => {
+      state.status = 'succeeded'
+      state.ads = [];
+      state.ads = state.ads.concat(action.payload);
+    },
+    [fetchOverseasJobsAds.rejected]: (state, action) => {
       state.status = 'failed'
       state.error = action.error.message
     },

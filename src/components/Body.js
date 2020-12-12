@@ -13,6 +13,7 @@ import {
     fetchHomeLivingAds, 
     fetchJobsAds, 
     fetchMobilesAds, 
+    fetchOverseasJobsAds, 
     fetchPetsAnimalsAds, 
     fetchPropertyAds, 
     fetchServicesAds, 
@@ -51,7 +52,7 @@ const Body = () => {
       }
 
       const handleOverseasJobsButton = () => {
-        dispatch(fetchAllAds());
+        dispatch(fetchOverseasJobsAds());
         history.push('/all-ads');
         window.scrollTo(0, 0);
       }
