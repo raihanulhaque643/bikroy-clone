@@ -27,8 +27,9 @@
 }
 
 .adInfoContainerImageBox {
-    height: 160px;
-    width: 160px;
+    height: 180px;
+    width: 180px;
+    margin: 0px 20px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
