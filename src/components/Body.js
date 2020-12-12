@@ -152,72 +152,72 @@ const Body = () => {
                 <div className="bodyRowTwo">
 
                 <div className="bodyRowTwoPanel">
-                <button style={{outline: 'none', background: 'white', border: 'none', width: '80%'}} onClick={()=>{handleMobilesButton()}}>
+                <button style={{outline: 'none', background: 'white', border: 'none'}} onClick={()=>{handleMobilesButton()}}>
                 <CategoryItem
                 name="Mobiles" productStock="87,797" description="Buy and sell new and used mobiles, SIM cards and other mobile accessories in Bangladesh. Choose from top brands including Apple, OnePlus, Xiaomi and Nokia."  image="mobiles.png" />
                 </button>
-                <button style={{outline: 'none', background: 'white', border: 'none', width: '80%'}} onClick={()=>{handleElectronicsButton()}}>
+                <button style={{outline: 'none', background: 'white', border: 'none'}} onClick={()=>{handleElectronicsButton()}}>
                 <CategoryItem 
                 name="Electronics" productStock="85,951" description="Find great deals for used electronics in Bangladesh including mobile phones, computers, laptops, TVs, cameras and much more."  image="television.svg" />
                 </button>
-                <button style={{outline: 'none', background: 'white', border: 'none', width: '80%'}} onClick={()=>{handleHomeLivingButton()}}>
+                <button style={{outline: 'none', background: 'white', border: 'none'}} onClick={()=>{handleHomeLivingButton()}}>
                 <CategoryItem  
                 name="Home & Living" productStock="33,344" description="Buy and sell new and used home appliances including furniture, kitchen items, gardening products and other items for your garden."  image="washing-machine.svg" />
                 </button>
-                <button style={{outline: 'none', background: 'white', border: 'none', width: '80%'}} onClick={()=>{handleVehiclesButton()}}>
+                <button style={{outline: 'none', background: 'white', border: 'none'}} onClick={()=>{handleVehiclesButton()}}>
                 <CategoryItem 
                 name="Vehicles" productStock="29,415" description="Buy and sell used cars, motorbikes and other vehicles in Bangladesh. Choose from top brands including Toyota, Nissan, Honda and Suzuki."  image="vehicles.png" />
                 </button>
                 </div>
 
                 <div className="bodyRowTwoPanel">
-                <button style={{outline: 'none', background: 'white', border: 'none', width: '100%'}} onClick={()=>{handlePropertyButton()}}>
+                <button style={{outline: 'none', background: 'white', border: 'none'}} onClick={()=>{handlePropertyButton()}}>
                 <CategoryItem 
                 name="Property" productStock="17,439" description="View listings for property in Bangladesh. Find the cheapest rates for apartments, commercial and residential properties, as well as for land and plots."  image="property.png" />
                 </button>
-                <button style={{outline: 'none', background: 'white', border: 'none', width: '100%'}} onClick={()=>{handleFashionBeautyButton()}}>
+                <button style={{outline: 'none', background: 'white', border: 'none'}} onClick={()=>{handleFashionBeautyButton()}}>
                 <CategoryItem
                  name="Fashion & Beauty" productStock="17,284" description="Buy and sell clothing, garments, shoes and other personal items including handbags, perfumes etc."  image="watch.svg" />
                 </button>
-                <button style={{outline: 'none', background: 'white', border: 'none', width: '100%'}} onClick={()=>{handlePetsAnimalsButton()}}>
+                <button style={{outline: 'none', background: 'white', border: 'none'}} onClick={()=>{handlePetsAnimalsButton()}}>
                 <CategoryItem 
                 name="Pets & Animals" productStock="15,716" description="Search from the widest variety of pets in Bangladesh. Select from dogs, puppies, cats, kittens, birds and other domesticated animals."  image="shiba.svg" />
                 </button>
-                <button style={{outline: 'none', background: 'white', border: 'none', width: '100%'}} onClick={()=>{handleHobbiesSportsKidsButton()}}>
+                <button style={{outline: 'none', background: 'white', border: 'none'}} onClick={()=>{handleHobbiesSportsKidsButton()}}>
                 <CategoryItem
                 name="Hobbies, Sports & Kids" productStock="7,337" description="Buy and sell used musical instruments, sports gear and accessories, art and collectibles and items for kids here."  image="football-ball.svg" />
                 </button>
                 </div>
 
                 <div className="bodyRowTwoPanel">
-                <button style={{outline: 'none', background: 'white', border: 'none', width: '100%'}} onClick={()=>{handleEducationButton()}}>
+                <button style={{outline: 'none', background: 'white', border: 'none'}} onClick={()=>{handleEducationButton()}}>
                 <CategoryItem 
                 name="Education" productStock="4,245" description="Buy and sell books and magazines, find tuition, classes and other educational resources in Bangladesh."  image="graduated.svg" />
                 </button>
-                <button style={{outline: 'none', background: 'white', border: 'none', width: '100%'}} onClick={()=>{handleEssentialsButton()}}>
+                <button style={{outline: 'none', background: 'white', border: 'none'}} onClick={()=>{handleEssentialsButton()}}>
                 <CategoryItem 
                 name="Essentials" productStock="2,979" description="Find daily essential products, including groceries, healthcare products, household items, fruits & vegetables, meat & seafood and baby products near you."  image="groceries.svg" />
                 </button>
-                <button style={{outline: 'none', background: 'white', border: 'none', width: '100%'}} onClick={()=>{handleBusinessIndustryButton()}}>
+                <button style={{outline: 'none', background: 'white', border: 'none'}} onClick={()=>{handleBusinessIndustryButton()}}>
                 <CategoryItem 
                 name="Business & Industry" productStock="2,433" description="This is where businesses in Bangladesh trade, numerous business and industry services offered to trade and consumers."  image="factory.svg" />
                 </button>
-                <button style={{outline: 'none', background: 'white', border: 'none', width: '100%'}} onClick={()=>{handleJobsButton()}}>
+                <button style={{outline: 'none', background: 'white', border: 'none'}} onClick={()=>{handleJobsButton()}}>
                 <CategoryItem 
                 name="Jobs" productStock="892" description="Post and apply for jobs and career opportunities in Bangladesh. Search for job vacancies in your city."  image="jobs.png" />
                 </button>
                 </div>
 
                 <div className="bodyRowTwoPanel">
-                <button style={{outline: 'none', background: 'white', border: 'none', width: '100%'}} onClick={()=>{handleServicesButton()}}>
+                <button style={{outline: 'none', background: 'white', border: 'none'}} onClick={()=>{handleServicesButton()}}>
                 <CategoryItem
                  name="Services" productStock="788" description="Browse through a range of service offerings to businesses and consumers alike."  image="customer-support.svg" />
                  </button>
-                 <button style={{outline: 'none', background: 'white', border: 'none', width: '100%'}} onClick={()=>{handleAgricultureButton()}}>
+                 <button style={{outline: 'none', background: 'white', border: 'none'}} onClick={()=>{handleAgricultureButton()}}>
                 <CategoryItem 
                 name="Agriculture" productStock="696" description="Find agricultural products, including fresh crop seeds, plants and fertilizers in Bangladesh."  image="agriculture.svg" />
                 </button>
-                <button style={{outline: 'none', background: 'white', border: 'none', width: '100%'}} onClick={()=>{handleOverseasJobsButton()}}>
+                <button style={{outline: 'none', background: 'white', border: 'none'}} onClick={()=>{handleOverseasJobsButton()}}>
                 <CategoryItem
                  name="Overseas Jobs" productStock="42" description="Apply for overseas jobs, browse a range of quality international job vacancies in your dream location."  image="overseas.png" />
                  </button>
