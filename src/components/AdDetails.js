@@ -62,6 +62,9 @@ const AdDetails = (props) => {
                         <span style={{fontWeight: 'bold', color:'black'}}> {ad.contact}</span>
                         </div>
                         <div className="adDetailsBodyContentRightRow">Chat</div>
+                        {
+                            (localStorage.getItem('email') == ad.adOwner) && <button className="deleteAdButton">DELETE</button> 
+                        }
                         </div>
                     </div>
                 </div>

@@ -24,7 +24,7 @@ const Header = () => {
             setContent(
                 <div style={{display: 'flex'}}>
                     <div>{email}</div>
-                    <div className="loginButton" onClick={()=>{logOut()}}>
+                    <div className="loginButton" onClick={()=>{logOut();history.push('/')}}>
                         Log out
                     </div>
                 </div>

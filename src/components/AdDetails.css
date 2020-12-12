@@ -89,3 +89,26 @@
     padding: 10px;
     color: gray;
 }
+
+.deleteAdButton {
+    width: 100%;
+    color: rgba(211, 7, 7, 0.959);
+    background-color: rgb(226, 226, 226);
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    height: 32px;
+    margin: 12px 0px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.deleteAdButton:hover {
+    background-color: rgba(211, 7, 7, 0.959);
+    color: white;
+}
+
+.deleteAdButton:active {
+    background-color: rgba(189, 8, 8, 0.959);
+}
+
