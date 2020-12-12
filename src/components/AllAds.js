@@ -29,6 +29,8 @@ const AllAds = () => {
 
     const ads = useSelector(selectAds);
 
+    let sortedAds = ads.slice().sort((a, b) => b.timestamp - a.timestamp)
+
     const dispatch = useDispatch();
 
     const adsStatus = useSelector(state => state.ads.status);
@@ -41,8 +43,8 @@ const AllAds = () => {
     };
 
     const results = !searchTerm
-    ? ads
-    : ads.filter(ad =>
+    ? sortedAds
+    : sortedAds.filter(ad =>
         ad.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())
       );
 
