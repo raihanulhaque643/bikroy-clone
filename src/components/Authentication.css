@@ -1,5 +1,5 @@
 .authContainer {
-    width: 100%;
+    width: 100vw;
     background: #e7edee;
     box-sizing: border-box;
     min-height: 477px;
@@ -49,5 +49,30 @@
     display: flex;
     align-items: flex-start;
     margin-left: 30px;
+}
+
+@media (max-width: 768px) {
+    .authBody {
+        width: auto;
+        flex-direction: column;
+        padding: 0px;
+    }
+    .authColOne {
+    border-right: none;
+    border-bottom: 1px solid rgb(216, 215, 215);
+    margin-bottom: 20px;
+    align-items: center;
+    padding-top: 0px;
+    margin-top: 0px;
+    }
+    .authColTwo {
+        align-items: center;
+        margin-left: 0px;
+        padding-bottom: 20px;
+    }
+    .authColOneHolder, .authColTwoHolder {
+        width: 100%;
+        padding: 0px 10px;
+    }
 }
 
