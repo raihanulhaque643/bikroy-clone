@@ -1,8 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+
 .headerContainer {
-    width: 100%;
+    width: 100vw;
     background: #128e73;
     box-sizing: border-box;
-    height: 60px;
+    min-height: 60px;
     display: flex;
     justify-content: center;
     overflow: visible;
@@ -79,4 +83,47 @@
 
 .loginButton {
     margin-left: 50px;
+}
+
+.email_logout_Container {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        width: 100vw;
+        padding: 10px;
+    }
+    .headerLeft {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+    .headerRight {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+    .logo {
+        margin: 8px 0px;
+    }
+    .allAdsLink {
+        margin: 8px 0px;
+    }
+    .email_logout_Container {
+        flex-direction: column;
+    }
+    .loginButton {
+        margin-left: 0px;
+        margin: 8px 0px;
+        margin-left: auto;
+    }
+    .email {
+        display: none;
+    }
+    .postYourAdButtonContainer {
+        margin-left: 0px;
+    }
 }

@@ -22,8 +22,8 @@ const Header = () => {
         const email = localStorage.getItem('email')
         if(email) {
             setContent(
-                <div style={{display: 'flex'}}>
-                    <div>{email}</div>
+                <div className="email_logout_Container">
+                    <div className="email">{email}</div>
                     <div className="loginButton" onClick={()=>{logOut();history.push('/')}}>
                         Log out
                     </div>
@@ -67,7 +67,7 @@ const Header = () => {
                     }>All ads</div>
             </div>
             <div className="headerRight">
-                {content}
+                <div>{content}</div>
                 <div className="postYourAdButtonContainer">
                     <button 
                     className="postYourAdButton"  
