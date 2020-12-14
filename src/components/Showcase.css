@@ -1,5 +1,5 @@
 .showcaseContainer {
-    width: 100%;
+    width: 100vw;
     background: white;
     box-sizing: border-box;
     min-height: 450px;
@@ -157,4 +157,53 @@
     text-decoration: none;
     color: #00547e;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .showcase {
+        width: 100vw;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .showcaseColumnOne {
+        width: auto;
+    }
+    .showcaseColumnOne > .rowOne {
+        padding: 0px;
+    }
+    .showcaseCategoriesRowOne {
+        justify-content: space-between;
+        padding: 5px;
+        font-size: 16px;
+    }
+    .showcaseCategories > .showcaseCategoriesRowOne > .categoryColumn > button {
+        font-size: 16px;
+    }
+    .showcaseCategoriesRowTwo {
+        flex-direction: column;
+        padding: 5px;
+        font-size: 16px;
+    }
+    .showcaseCategoriesRowTwoItemOne, .showcaseCategoriesRowTwoItemTwo, .showcaseCategoriesRowTwoItemThree {
+        margin: 5px 0px;
+    }
+    .showcaseColumnTwo {
+        display: none;
+    }
+    .showcaseColumnThree{
+        margin-right: 0px;
+        padding: 0px;
+        width: 100vw;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .showcaseColumnThree > .cities ul {
+        /* padding: 0px 16px; */
+        list-style-type:none;
+        text-align: left;
+    }
+    .showcaseColumnThree > .cities ul button {
+        font-size: 16px;
+        margin: 4px 0px;
+    }
 }
