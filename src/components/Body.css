@@ -130,4 +130,10 @@
         width: 90%;
         background-color: rgba(241, 240, 240, 0.877);
    }
+   .bodyFooter {
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+    align-items: flex-start;
+}
 }
