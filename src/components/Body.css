@@ -3,7 +3,7 @@
 }
 
 .bodyContainer {
-    width: 100%;
+    width: 100vw;
     background: #e7edee;
     box-sizing: border-box;
     min-height: 900px;
@@ -45,7 +45,13 @@
     justify-content: flex-start;
     align-items: center;
     margin: 10px 0px;
-    width: 100%;
+    width: 100vw;
+}
+
+.bodyRowTwoPanel > button {
+     outline: none;
+     background: white;
+     border: none;
 }
 
 .bodyRowOneLeft, .bodyRowOneRight {
@@ -104,4 +110,24 @@
 .bodyFooterButton:active {
     cursor: pointer;
     background: #ffd972;
+}
+
+@media (max-width: 768px) {
+    .bodyMainColumn {
+        width: auto;
+    }
+    .bodyRowOne {
+        display: none;
+    }
+    .bodyRowTwoPanel {
+        flex-direction: column;
+    }
+    .bodyFooter {
+        width: auto;
+    }
+    .bodyRowTwoPanel > button {
+        margin: 10px 0px;
+        width: 90%;
+        background-color: rgba(241, 240, 240, 0.877);
+   }
 }
