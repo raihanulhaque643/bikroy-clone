@@ -30,12 +30,13 @@ const AdDetails = (props) => {
                     </div>
                     <div className="adDetailsBodyContentLeftDescriptionContainer">
                         <NumberFormat
-                        style={{color: 'darkgreen', fontSize: '22px', fontWeight: 'bold'}}
                         value={ad.price} 
                         displayType={'text'} 
                         thousandSeparator={true} 
                         thousandsGroupStyle="lakh" 
-                        prefix={'Tk. '} />
+                        prefix={'Tk. '}
+                        className="adDetailsPrice"
+                         />
                         <span style={{color: 'gray', fontStyle:'italic'}}>
                         {
                             ad.negotiable ?
