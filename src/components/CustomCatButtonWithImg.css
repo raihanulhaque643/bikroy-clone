@@ -40,3 +40,9 @@
     font-size: 14px;
     margin: 10px 10px;
 }
+
+@media (max-width: 768px) {
+    .modalColumnRow {
+        height: 20px;
+    }
+}
