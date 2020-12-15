@@ -76,3 +76,24 @@
 .allAdsBodyRight {
     width: 70%;
 }
+
+@media (max-width: 768px) {
+    .allAdsHeader {
+        width: 100vw;
+        justify-content: flex-start;
+    }
+    .searchAdBox {
+        width: 100%;
+    }
+    .allAdsBodyColumns {
+        flex-direction: column;
+    }
+    .allAdsBodyLeft {
+        width: 100%;
+        border-bottom: 1px solid lightgray;
+    }
+    .allAdsBodyRight {
+        width: 100%;
+        background: lightgray;
+    }
+}

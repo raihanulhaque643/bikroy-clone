@@ -51,3 +51,26 @@
     font-weight: bold;
     color: darkgreen;
 }
+
+@media (max-width: 768px) {
+    .adInfoContainer {
+        flex-direction: column;
+        margin: 10px 0px;
+        background: white;
+    }
+    .adInfoContainerImage {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .adInfoContainerImageBox {
+        height: 100%;
+        width: 100%;
+    }  
+    .adInfoContainerDetails {
+        margin: 25px;
+        margin-top: 10px;
+    }
+}
