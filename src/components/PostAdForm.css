@@ -3,7 +3,7 @@
 }
 
 .postAdFormContainer {
-    width: 100vw;
+    width: 100%;
     min-height: auto;
     max-height: auto;
     background: #e7edee;
@@ -11,7 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    overflow: visible;
+    overflow: hidden;
     border-bottom: 1.5px solid green;
     padding-bottom: 25px;
     padding-top: 25px;

@@ -1,12 +1,12 @@
 .showcaseContainer {
-    width: 100vw;
+    width: 100%;
     background: white;
     box-sizing: border-box;
     min-height: 450px;
     max-height: auto;
     display: flex;
     justify-content: center;
-    overflow: visible;
+    overflow: hidden;
     border-bottom: 1.5px solid green;
     padding-bottom: 25px;
 }

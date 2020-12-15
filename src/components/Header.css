@@ -3,13 +3,14 @@
 }
 
 .headerContainer {
-    width: 100vw;
+    width: 100%;
     background: #128e73;
     box-sizing: border-box;
     min-height: 60px;
     display: flex;
     justify-content: center;
-    overflow: visible;
+    overflow: hidden;
+
 }
 
 .header {
