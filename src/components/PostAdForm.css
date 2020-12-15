@@ -3,7 +3,7 @@
 }
 
 .postAdFormContainer {
-    width: 100%;
+    width: 100vw;
     min-height: auto;
     max-height: auto;
     background: #e7edee;
@@ -18,7 +18,6 @@
 }
 
 .postAdFormBody {
-    width: 100%;
     height: auto;
     background: white;
     display: flex;
@@ -129,4 +128,23 @@
 
 .borderRed {
     border: 1px solid red;
+}
+
+@media (max-width: 768px) {
+    .postAdFormBody{
+        width: auto;
+    }
+    .postAdFormHeader {
+        width: 100vw;
+    }
+    .postAdForm {
+        width: 100vw;
+    }
+    .formFieldGroup {
+        width: 100%;
+        margin: 10px 0px;
+    }
+    .postAdButtonContainer {
+        width: auto;
+    }
 }
