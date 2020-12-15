@@ -1,16 +1,26 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import NumberFormat from 'react-number-format';
 import './AdDetails.css';
+import { deleteImageAsync } from '../features/ads/adsSlice';
 
 const AdDetails = (props) => {
+
+    const dispatch = useDispatch();
+    const history = useHistory();
 
     let {uniqueAdId} = useParams();
 
     const ad = useSelector(state =>
         state.ads.ads.find(ad => ad.uniqueAdId === uniqueAdId)
       );
+
+    const handleDelete = (ad) => {
+        dispatch(deleteImageAsync(ad));
+        history.push('/all-ads');
+        window.scrollTo(0, 0);
+    }
 
     return (
         <div className="adDetailsContainer">
@@ -64,7 +74,9 @@ const AdDetails = (props) => {
                         </div>
                         <div className="adDetailsBodyContentRightRow">Chat</div>
                         {
-                            (localStorage.getItem('email') == ad.adOwner) && <button className="deleteAdButton">DELETE</button> 
+                            (localStorage.getItem('email') == ad.adOwner) && <button
+                            onClick={()=>{handleDelete(ad)}}
+                             className="deleteAdButton">DELETE</button> 
                         }
                         </div>
                     </div>

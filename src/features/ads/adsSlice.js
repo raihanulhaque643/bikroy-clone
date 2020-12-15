@@ -330,6 +330,33 @@ export const createAdAsync = createAsyncThunk('ads/createAd', async (adDetails) 
   })
 });
 
+export const deleteAdAsync = createAsyncThunk('ads/deleteAd', async (ad) => {
+   console.log(ad.uniqueAdId);
+   db.collection("ads").doc(ad.uniqueAdId).delete().then(function() {
+    console.log("Document successfully deleted!");
+    }).catch(function(error) {
+    console.error("Error removing document: ", error);
+    });
+});
+
+
+export const deleteImageAsync = ad => dispatch => {
+
+  // Create a reference to the file to delete
+  var desertRef = storageRef.child(ad.uniqueImageId);
+
+  // Delete the file
+  desertRef.delete().then(function() {
+    // File deleted successfully
+    console.log('image deleted successfully');
+    dispatch(deleteAdAsync(ad));
+  }).catch(function(error) {
+    // Uh-oh, an error occurred!
+    console.log('image deletion failed');
+  });
+
+}
+
 export const uploadImageAsync = values => dispatch => {
 
   let today = new Date();
@@ -412,7 +439,6 @@ export const uploadImageAsync = values => dispatch => {
       price: values.price
     }
 
-    // console.log(adDetails);
     dispatch(createAdAsync(adDetails));
 
   });
@@ -751,6 +777,16 @@ export const adsSlice = createSlice({
     [fetchOverseasJobsAds.rejected]: (state, action) => {
       state.status = 'failed'
       state.error = action.error.message
+    },
+
+    [deleteAdAsync.pending]: (state, action) => {
+      state.status = 'loading'
+    },
+    [deleteAdAsync.fulfilled]: (state, action) => {
+      state.status = 'idle'
+    },
+    [deleteAdAsync.rejected]: (state, action) => {
+      state.status = 'failed'
     },
 
     [createAdAsync.pending]: (state, action) => {
