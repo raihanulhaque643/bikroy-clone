@@ -43,6 +43,6 @@
 
 @media (max-width: 768px) {
     .modalColumnRow {
-        height: 20px;
+        width: 80vw;
     }
 }
