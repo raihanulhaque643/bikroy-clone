@@ -38,21 +38,20 @@
     border-radius: 6px;
     border-bottom: 4px solid rgb(221, 220, 220);
 
-    padding-bottom: 20px;
+    padding: 20px;
 }
 
 .bodyRowTwoPanel {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin: 10px 0px;
-    width: 100vw;
 }
 
 .bodyRowTwoPanel > button {
      outline: none;
      background: white;
      border: none;
+     max-width: 25%;
 }
 
 .bodyRowOneLeft, .bodyRowOneRight {
@@ -136,5 +135,8 @@
     padding: 10px;
     justify-content: center;
     align-items: flex-start;
-}
+    }
+    .bodyRowTwoPanel > button {
+        max-width: 100%;
+    }
 }
