@@ -139,7 +139,7 @@
     }
     .adDetailsBodyContentLeftImageContainer {
         height: auto;
-        width: 100vw;
+        width: 100%;
     }
     .adDetailsBodyContentLeftImageContainer > img {
         height: 100%;
