@@ -63,17 +63,18 @@
 }
 
 .adDetailsBodyContentLeftImageContainer {
-    height: auto;
-    width: auto;
+    height: 600px;
+    width: 100%;
     background: #e7edee;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px 0px;
 }
 
 .adDetailsBodyContentLeftImageContainer > img {
-    height: 400px;
-    max-width: 474px;
+    height: 100%;
+    width: 100%;
     object-fit: contain;
 }
 
@@ -135,6 +136,15 @@
     .adDetailsBodyContentRightColumn {
         margin: 20px 0px;
         width: 100%;
+    }
+    .adDetailsBodyContentLeftImageContainer {
+        height: auto;
+        width: 100vw;
+    }
+    .adDetailsBodyContentLeftImageContainer > img {
+        height: 100%;
+        width: 94%;
+        object-fit: contain;
     }
 }
 
